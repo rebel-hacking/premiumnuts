@@ -1,0 +1,29 @@
+[
+  {
+    "id": "festive-celebration-2026",
+    "title": "Grand Festive Celebration Offer",
+    "description": "Complimentary personalized gold-embossed ribbon & wax-sealed calligraphy card with every Medium or Large hamper order.",
+    "badge": "Festive Special",
+    "image": "/images/offers/festive-offer.jpg",
+    "active": true,
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "discountHighlight": "Complimentary Luxury Customization",
+    "ctaText": "Explore Our Hamper",
+    "ctaLink": "/our-hamper"
+  },
+  {
+    "id": "corporate-bulk-savings",
+    "title": "Corporate Executive Tier Incentive",
+    "description": "Special corporate tier benefits and complimentary logo hot-stamping for orders of 25 or more hampers.",
+    "badge": "Corporate Privilege",
+    "image": "/images/corporate/corporate-hampers-grid.jpg",
+    "active": true,
+    "startDate": "2026-01-01",
+    "endDate": "2027-12-31",
+    "discountHighlight": "Bespoke Branding Included",
+    "ctaText": "Enquire Corporate Gifting",
+    "ctaLink": "/corporate-gifting"
+  }
+]
+

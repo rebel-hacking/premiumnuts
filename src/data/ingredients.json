@@ -1,0 +1,120 @@
+[
+  {
+    "id": "almonds",
+    "name": "Almonds",
+    "category": "Nuts",
+    "tagline": "California Nonpareil Supreme",
+    "description": "Crisp dry-roasted almonds with golden skin and sweet toasted finish.",
+    "image": "/images/ingredients/almonds.webp",
+    "active": true
+  },
+  {
+    "id": "cashews",
+    "name": "Cashews",
+    "category": "Nuts",
+    "tagline": "King W-180 Mammoth Whole",
+    "description": "Velvety ivory jumbo crescents with opulent, buttery-sweet density.",
+    "image": "/images/ingredients/cashews.webp",
+    "active": true
+  },
+  {
+    "id": "walnuts",
+    "name": "Walnuts",
+    "category": "Nuts",
+    "tagline": "Royal Chandler Halves",
+    "description": "Hand-cracked amber-gold halves, silky tender with zero bitterness.",
+    "image": "/images/ingredients/walnuts.webp",
+    "active": true
+  },
+  {
+    "id": "pistachios",
+    "name": "Pistachios",
+    "category": "Nuts",
+    "tagline": "Sun-Split Emerald Kernels",
+    "description": "Naturally tree-opened shells with vivid jade green kernels and sea salt.",
+    "image": "/images/ingredients/pistachios.webp",
+    "active": true
+  },
+  {
+    "id": "raisins",
+    "name": "Raisins",
+    "category": "Dry Fruits",
+    "tagline": "Golden & Dark Afghan Kishmish",
+    "description": "Plump sun-dried raisins bursting with natural nectar and honeyed chew.",
+    "image": "/images/ingredients/raisins.webp",
+    "active": true
+  },
+  {
+    "id": "dates",
+    "name": "Dates",
+    "category": "Dry Fruits",
+    "tagline": "Imperial Medjool Dates",
+    "description": "Mammoth dates with molten caramel sweetness and papery thin skins.",
+    "image": "/images/ingredients/dates.webp",
+    "active": true
+  },
+  {
+    "id": "figs",
+    "name": "Figs",
+    "category": "Dry Fruits",
+    "tagline": "Zagros Mountain Anjeer",
+    "description": "Golden sun-dried figs with delicate seeds and rich wildflower honey tones.",
+    "image": "/images/ingredients/figs.webp",
+    "active": true
+  },
+  {
+    "id": "apricots",
+    "name": "Apricots",
+    "category": "Dry Fruits",
+    "tagline": "Mediterranean Sun-Kissed",
+    "description": "Plump orange apricots offering a balanced sweet and tart orchard fruitiness.",
+    "image": "/images/ingredients/apricots.webp",
+    "active": true
+  },
+  {
+    "id": "hazelnuts",
+    "name": "Hazelnuts",
+    "category": "Nuts",
+    "tagline": "Piedmontese Roasted",
+    "description": "Slow drum-roasted spherical hazelnuts with fragrant cocoa-praline finish.",
+    "image": "/images/ingredients/hazelnuts.webp",
+    "active": true
+  },
+  {
+    "id": "macadamia-nuts",
+    "name": "Macadamia Nuts",
+    "category": "Nuts",
+    "tagline": "Hawaiian Golden Whole",
+    "description": "Opulent round whole macadamias with rich creamy crunch and delicate oils.",
+    "image": "/images/ingredients/macadamia-nuts.webp",
+    "active": true
+  },
+  {
+    "id": "brazil-nuts",
+    "name": "Brazil Nuts",
+    "category": "Nuts",
+    "tagline": "Amazonian Wild Harvest",
+    "description": "Large distinctive kernels packed with natural selenium and buttery snap.",
+    "image": "/images/ingredients/brazil-nuts.webp",
+    "active": true
+  },
+  {
+    "id": "pecans",
+    "name": "Pecans",
+    "category": "Nuts",
+    "tagline": "Southern Mammoth Halves",
+    "description": "Deep golden ribbed halves with mellow maple sweetness and tender snap.",
+    "image": "/images/ingredients/pecans.webp",
+    "active": true
+  },
+  {
+    "id": "pine-nuts",
+    "name": "Pine Nuts",
+    "category": "Nuts",
+    "tagline": "Himalayan Chilgoza Kernels",
+    "description": "Small ivory pine kernels with woodsy resinous aroma and tender sweetness.",
+    "image": "/images/ingredients/pine-nuts.webp",
+    "active": true
+  }
+]
+

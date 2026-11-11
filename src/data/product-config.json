@@ -1,0 +1,45 @@
+{
+  "id": "premium-nuts-hamper",
+  "name": "Premium Nuts & Dry Fruits Gift Hamper",
+  "tagline": "A Little Box of Extraordinary Goodness",
+  "shortDescription": "Our signature luxury magnetic-closure presentation box featuring a satin gold 6-compartment interior, custom-curated with your choice of six exceptional dry fruits and nuts.",
+  "selectionLimit": 6,
+  "features": [
+    "Rigid magnetic-closure presentation box in signature royal burgundy finish",
+    "Satin gold interior tray with 6 partitioned freshness compartments",
+    "Choose exactly 6 gourmet varieties from 13 world-class harvests",
+    "Complimentary luxury gift wrapping, embossed ribbon & handwritten message card",
+    "Hermetically sealed for maximum crunch, natural aroma & oil preservation"
+  ],
+  "sizes": [
+    {
+      "id": "small",
+      "name": "Small",
+      "subtitle": "Bespoke Personal Gift",
+      "approxWeight": "450g Total (~75g per compartment)",
+      "price": 499,
+      "originalPrice": 899,
+      "description": "An intimate gesture of appreciation, ideal for personal tokens and festive greetings."
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "subtitle": "Most Popular Hamper",
+      "approxWeight": "750g Total (~125g per compartment)",
+      "price": 699,
+      "originalPrice": 1099,
+      "isPopular": true,
+      "description": "The quintessential luxury presentation, perfectly balanced for family and friend gifting."
+    },
+    {
+      "id": "large",
+      "name": "Large",
+      "subtitle": "Grand Celebration Box",
+      "approxWeight": "1.2kg Total (~200g per compartment)",
+      "price": 999,
+      "originalPrice": 1499,
+      "description": "An opulent centerpiece hamper crafted for major celebrations, weddings, and executive relationships."
+    }
+  ]
+}
+

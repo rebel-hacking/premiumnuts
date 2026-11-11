@@ -1,0 +1,52 @@
+[
+  {
+    "id": "festivals",
+    "name": "Festivals & Celebrations",
+    "tagline": "Diwali, Eid, Christmas & New Year",
+    "description": "Honor cherished traditions with our signature royal burgundy gift hampers, custom-filled with golden almonds, jumbo cashews, and dates.",
+    "image": "/images/occasions/festive-hamper.jpg"
+  },
+  {
+    "id": "weddings",
+    "name": "Weddings & Nuptials",
+    "tagline": "Elegant Trousseau & Guest Favors",
+    "description": "Sophisticated heirloom presentation boxes personalized with wedding monograms, embossed satin ribbons, and premium six-variety curations.",
+    "image": "/images/occasions/wedding-hamper.jpg"
+  },
+  {
+    "id": "engagements",
+    "name": "Engagements & Milestones",
+    "tagline": "Marking New Chapters with Distinction",
+    "description": "Celebrate auspicious beginnings with hand-selected royal walnuts, emerald pistachios, and mountain anjeer figs in our keepsake hamper.",
+    "image": "/images/lifestyle/hamper-lifestyle.jpg"
+  },
+  {
+    "id": "corporate-events",
+    "name": "Corporate & Annual Galas",
+    "tagline": "Executive Recognition & Summits",
+    "description": "Distinguished corporate hampers crafted to reflect your organization's highest standards of excellence and client appreciation.",
+    "image": "/images/corporate/corporate-hampers-grid.jpg"
+  },
+  {
+    "id": "employee-appreciation",
+    "name": "Employee Appreciation",
+    "tagline": "Rewarding Excellence & Loyalty",
+    "description": "A deeply thoughtful, wholesome gesture of gratitude for teams, work anniversaries, and quarterly milestone celebrations.",
+    "image": "/images/hamper/signature-hamper-main.jpg"
+  },
+  {
+    "id": "birthdays-anniversaries",
+    "name": "Birthdays & Anniversaries",
+    "tagline": "Personal Expressions of Love",
+    "description": "Surprise loved ones with a customized combination of their six favourite gourmet treats in our magnetic luxury presentation casket.",
+    "image": "/images/hamper/signature-hamper-tray.jpg"
+  },
+  {
+    "id": "return-gifts",
+    "name": "Return Gifts & Favors",
+    "tagline": "Memorable Farewell Tokens",
+    "description": "Leave an indelible impression with compact Small and Medium luxury hampers designed for housewarmings, poojas, and intimate family gatherings.",
+    "image": "/images/hamper/signature-hamper-closure.jpg"
+  }
+]
+
