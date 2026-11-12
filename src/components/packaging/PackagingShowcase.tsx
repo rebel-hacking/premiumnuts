@@ -1,11 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, Shield, Gift, ArrowRight, Check } from "lucide-react";
 
 export default function PackagingShowcase() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const detailY = useTransform(scrollYProgress, [0, 1], [24, -24]);
+  const mainScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.05, 1, 1.03]);
+
   const packagingFeatures = [
     {
       title: "Magnetic Flap Precision Closure",
@@ -22,22 +31,27 @@ export default function PackagingShowcase() {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FAF6EF] text-[#29251F] border-t border-[#F2E8D8]">
+    <section
+      ref={sectionRef}
+      className="py-24 sm:py-32 bg-[#FAF6EF] text-[#29251F] border-t border-[#F2E8D8] overflow-x-clip"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Visual Showcase Side */}
-          <div className="lg:col-span-6 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:items-start">
+          {/* Visual Showcase Side: Sticky on desktop, natural scroll on mobile/tablet */}
+          <div className="lg:col-span-6 relative lg:sticky lg:top-28">
             <div
               className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#B89A65]/40 shadow-2xl bg-white"
               style={{ position: "relative" }}
             >
-              <Image
-                src="/images/hamper/signature-hamper-main.jpg"
-                alt="Premium Nuts Magnetic Gift Hamper"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
+              <motion.div style={{ scale: mainScale }} className="absolute inset-0">
+                <Image
+                  src="/images/hamper/signature-hamper-main.jpg"
+                  alt="Premium Nuts Magnetic Gift Hamper"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </motion.div>
               {/* Desktop-only gradient overlay */}
               <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
 
@@ -62,10 +76,10 @@ export default function PackagingShowcase() {
               </p>
             </div>
 
-            {/* Overlapping Detail Vignette (Contained within viewport on tablet, negative right on desktop) */}
-            <div
+            {/* Overlapping Detail Vignette with subtle scroll parallax */}
+            <motion.div
               className="hidden sm:block absolute -bottom-6 right-2 lg:-bottom-8 lg:-right-8 w-56 h-40 rounded-2xl overflow-hidden border-2 border-white shadow-2xl"
-              style={{ position: "absolute", width: "14rem", height: "10.5rem" }}
+              style={{ position: "absolute", width: "14rem", height: "10.5rem", y: detailY }}
             >
               <Image
                 src="/images/hamper/signature-hamper-closure.jpg"
@@ -74,7 +88,7 @@ export default function PackagingShowcase() {
                 sizes="224px"
                 className="object-cover"
               />
-            </div>
+            </motion.div>
           </div>
 
           {/* Narrative Content Side */}
@@ -99,7 +113,14 @@ export default function PackagingShowcase() {
 
             <div className="space-y-4 mb-8">
               {packagingFeatures.map((feat, i) => (
-                <div key={i} className="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-[#F2E8D8]">
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-[#F2E8D8] shadow-xs"
+                >
                   <div className="w-6 h-6 rounded-full bg-[#183D30] text-[#FAF6EF] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
@@ -109,7 +130,7 @@ export default function PackagingShowcase() {
                     </h4>
                     <p className="text-xs text-[#777065] font-light mt-0.5">{feat.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 

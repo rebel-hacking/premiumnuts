@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import rawIngredients from "@/data/ingredients.json";
 import { Ingredient } from "@/types";
 import { Sparkles, ArrowRight, Check } from "lucide-react";
@@ -11,10 +12,16 @@ export default function ChooseYourGoodnessSection() {
   const ingredients = rawIngredients as Ingredient[];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#F2E8D8] text-[#29251F] border-t border-[#B89A65]/30">
+    <section className="py-24 sm:py-32 bg-[#F2E8D8] text-[#29251F] border-t border-[#B89A65]/30 overflow-x-clip">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Intro */}
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-18">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-2xl mx-auto mb-14 sm:mb-18"
+        >
           <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#B89A65]" />
             <span>BESPOKE INGREDIENT CURATION</span>
@@ -28,13 +35,17 @@ export default function ChooseYourGoodnessSection() {
           <p className="font-sans text-xs sm:text-sm text-[#777065] font-light max-w-lg mx-auto">
             Choose any six varieties from our thirteen world-class harvests. Every box is prepared fresh to order in our satin gold partitioned tray.
           </p>
-        </div>
+        </motion.div>
 
         {/* 13 Ingredients Preview Grid (Responsive 2 to 5 columns) */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-4 mb-12">
-          {ingredients.map((ing) => (
-            <div
+          {ingredients.map((ing, idx) => (
+            <motion.div
               key={ing.id}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, delay: (idx % 5) * 0.05, ease: [0.16, 1, 0.3, 1] }}
               className="group p-3 rounded-2xl bg-white border border-[#B89A65]/30 shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div
@@ -64,12 +75,18 @@ export default function ChooseYourGoodnessSection() {
                   {ing.tagline}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Action Link Banner */}
-        <div className="text-center p-6 rounded-2xl bg-white border border-[#B89A65]/40 max-w-xl mx-auto shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center p-6 rounded-2xl bg-white border border-[#B89A65]/40 max-w-xl mx-auto shadow-sm"
+        >
           <p className="text-xs text-[#777065] mb-4">
             Ready to hand-pick your six varieties? Step into our interactive customizer.
           </p>
@@ -80,7 +97,7 @@ export default function ChooseYourGoodnessSection() {
             <span>SELECT YOUR 6 VARIETIES NOW</span>
             <ArrowRight className="w-4 h-4 text-[#B89A65]" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

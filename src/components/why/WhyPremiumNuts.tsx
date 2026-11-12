@@ -1,9 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, Layers, Sliders, Box, Heart, Building2, CheckCircle2 } from "lucide-react";
 
 export default function WhyPremiumNuts() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const centerColumnY = useTransform(scrollYProgress, [0, 1], [16, -16]);
+
   const reasons = [
     {
       icon: Sparkles,
@@ -38,9 +46,18 @@ export default function WhyPremiumNuts() {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-[#FAF6EF] text-[#29251F] border-t border-[#F2E8D8]">
+    <section
+      ref={sectionRef}
+      className="py-24 sm:py-32 bg-[#FAF6EF] text-[#29251F] border-t border-[#F2E8D8] overflow-x-clip"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-2xl mx-auto mb-16 sm:mb-20"
+        >
           <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-3">
             THE MAISON ADVANTAGE
           </span>
@@ -53,14 +70,20 @@ export default function WhyPremiumNuts() {
           <p className="font-sans text-xs sm:text-sm text-[#777065] font-light max-w-md mx-auto mt-2">
             A gifting house dedicated to presentation, bespoke choice, and wholesome gourmet excellence.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {reasons.map((reason, idx) => {
             const Icon = reason.icon;
+            const isMiddleColumn = idx % 3 === 1;
             return (
-              <div
+              <motion.div
                 key={idx}
+                style={isMiddleColumn ? { y: centerColumnY } : undefined}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: (idx % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
                 className="p-6 sm:p-7 rounded-2xl bg-white border border-[#F2E8D8] shadow-xs hover:shadow-md hover:border-[#B89A65]/60 transition-all flex flex-col justify-between"
               >
                 <div>
@@ -82,7 +105,7 @@ export default function WhyPremiumNuts() {
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Signature Standard</span>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

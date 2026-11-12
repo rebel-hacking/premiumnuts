@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { ShoppingBag, Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { WHATSAPP_BASE_URL } from "@/lib/whatsapp";
@@ -12,6 +13,13 @@ export default function Navbar() {
   const { totalItemCount, openCartDrawer } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 180,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,6 +171,12 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
+      {/* Subtle Scroll Progress Hairline */}
+      <motion.div
+        style={{ scaleX, transformOrigin: "0%" }}
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#183D30] via-[#B89A65] to-[#702D3C] pointer-events-none"
+      />
     </header>
   );
 }

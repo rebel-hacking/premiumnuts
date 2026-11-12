@@ -1,14 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CartDrawer from "@/components/cart/CartDrawer";
 import { Sparkles, HeartHandshake, Trees, ShieldCheck, ArrowRight, Gift } from "lucide-react";
 
 export default function AboutUsPage() {
+  const philosophyRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: philosophyRef,
+    offset: ["start end", "end start"],
+  });
+  const photoScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.06, 1, 1.03]);
+
   const values = [
     {
       title: "The Spirit of Generosity",
@@ -53,17 +61,23 @@ export default function AboutUsPage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 sm:py-28 bg-[#FAF6EF]">
+      <section ref={philosophyRef} className="py-20 sm:py-28 bg-[#FAF6EF] overflow-x-clip">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 relative">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#B89A65]/40 shadow-xl bg-white">
-                <Image
-                  src="/images/lifestyle/hamper-lifestyle.jpg"
-                  alt="Premium Nuts Hamper Setting"
-                  fill
-                  className="object-cover"
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center lg:items-start">
+            <div className="lg:col-span-6 relative lg:sticky lg:top-28">
+              <div
+                className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#B89A65]/40 shadow-xl bg-white"
+                style={{ position: "relative" }}
+              >
+                <motion.div style={{ scale: photoScale }} className="absolute inset-0">
+                  <Image
+                    src="/images/lifestyle/hamper-lifestyle.jpg"
+                    alt="Premium Nuts Hamper Setting"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </motion.div>
               </div>
             </div>
 
@@ -119,8 +133,12 @@ export default function AboutUsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((v, i) => (
-              <div
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="p-8 rounded-2xl bg-white border border-[#B89A65]/30 shadow-xs flex flex-col justify-between"
               >
                 <div>
@@ -137,7 +155,7 @@ export default function AboutUsPage() {
                     {v.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

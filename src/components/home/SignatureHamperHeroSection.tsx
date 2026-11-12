@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
 import productConfig from "@/data/product-config.json";
 import { HamperSize } from "@/types";
 import { Sparkles, ArrowRight, Check, ShieldCheck, Gift } from "lucide-react";
@@ -10,25 +11,39 @@ import { Sparkles, ArrowRight, Check, ShieldCheck, Gift } from "lucide-react";
 export default function SignatureHamperHeroSection() {
   const sizes = productConfig.sizes as HamperSize[];
   const [selectedSize, setSelectedSize] = useState<HamperSize>(sizes[1] || sizes[0]);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const imageScale = useTransform(scrollYProgress, [0, 0.5, 1], [1.06, 1, 1.04]);
+  const overlayY = useTransform(scrollYProgress, [0, 1], [12, -12]);
 
   return (
-    <section id="hamper" className="py-24 sm:py-32 bg-[#FAF6EF] text-[#29251F] relative">
+    <section
+      id="hamper"
+      ref={sectionRef}
+      className="py-24 sm:py-32 bg-[#FAF6EF] text-[#29251F] relative overflow-x-clip"
+    >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Visual Showcase Side */}
-          <div className="lg:col-span-6 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:items-start">
+          {/* Visual Showcase Side: Sticky on desktop, natural scroll on mobile/tab */}
+          <div className="lg:col-span-6 relative lg:sticky lg:top-28">
             <div
               className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white border border-[#B89A65]/40 shadow-2xl group"
               style={{ position: "relative" }}
             >
-              <Image
-                src="/images/hamper/signature-hamper-main.jpg"
-                alt="Signature Royal Burgundy Gift Hamper"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+              <motion.div style={{ scale: imageScale }} className="absolute inset-0">
+                <Image
+                  src="/images/hamper/signature-hamper-main.jpg"
+                  alt="Signature Royal Burgundy Gift Hamper"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </motion.div>
               {/* Desktop-only gradient overlay */}
               <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70" />
 
@@ -43,7 +58,10 @@ export default function SignatureHamperHeroSection() {
               </div>
 
               {/* Desktop-only Bottom Caption Pill (Untouched on desktop) */}
-              <div className="hidden md:flex absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#F2E8D8] text-xs items-center justify-between">
+              <motion.div
+                style={{ y: overlayY }}
+                className="hidden md:flex absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#F2E8D8] text-xs items-center justify-between"
+              >
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-[#702D3C] font-semibold block">
                     EXCLUSIVE PRESENTATION
@@ -60,7 +78,7 @@ export default function SignatureHamperHeroSection() {
                     ₹{selectedSize.price}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Mobile-only Caption Card Below Image (Unblocks the photo on mobile) */}
