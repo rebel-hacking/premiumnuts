@@ -43,17 +43,17 @@ export default function CartPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
 
       <section className="pt-32 sm:pt-40 pb-24 sm:pb-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="mb-10 text-center sm:text-left">
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-2">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-2">
               YOUR GIFTING ORDER
             </span>
             <h1
-              className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal tracking-tight"
+              className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               Shopping Bag & WhatsApp Checkout
@@ -62,11 +62,11 @@ export default function CartPage() {
 
           {cart.length === 0 ? (
             <div className="py-20 text-center bg-white rounded-3xl border border-[#F2E8D8] p-10 max-w-xl mx-auto shadow-xs">
-              <div className="w-16 h-16 rounded-full bg-[#F2E8D8] text-[#183D30] flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-[#F2E8D8] text-[#702D3C] flex items-center justify-center mx-auto mb-4">
                 <Gift className="w-8 h-8" />
               </div>
               <h2
-                className="font-serif text-3xl text-[#183D30] font-normal mb-2"
+                className="font-serif text-3xl text-[#702D3C] font-normal mb-2"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
                 Your Gifting Bag is Empty
@@ -76,7 +76,7 @@ export default function CartPage() {
               </p>
               <Link
                 href="/our-hamper"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#183D30] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold shadow-md"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#702D3C] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold shadow-md"
               >
                 <span>Curate A Hamper Now</span>
                 <ArrowRight className="w-4 h-4" />
@@ -86,7 +86,7 @@ export default function CartPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               {/* Left Column: Line Items */}
               <div className="lg:col-span-7 space-y-4">
-                <div className="flex items-center justify-between pb-2 border-b border-[#F2E8D8] text-xs font-semibold text-[#183D30]">
+                <div className="flex items-center justify-between pb-2 border-b border-[#F2E8D8] text-xs font-semibold text-[#702D3C]">
                   <span>SELECTED HAMPERS ({totalItemCount})</span>
                   <span>PRICE</span>
                 </div>
@@ -99,12 +99,12 @@ export default function CartPage() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <h3
-                          className="font-serif text-2xl text-[#183D30] font-normal"
+                          className="font-serif text-2xl text-[#702D3C] font-normal"
                           style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                         >
                           {item.size.name} Hamper
                         </h3>
-                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-[#FAF6EF] border border-[#F2E8D8] text-[#183D30] font-semibold">
+                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-[#FAF6EF] border border-[#F2E8D8] text-[#702D3C] font-semibold">
                           {item.size.approxWeight}
                         </span>
                       </div>
@@ -114,7 +114,7 @@ export default function CartPage() {
 
                       {/* 6 Selected Varieties */}
                       <div className="p-3 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] mb-4">
-                        <span className="text-[11px] font-semibold text-[#183D30] uppercase tracking-wider block mb-1.5">
+                        <span className="text-[11px] font-semibold text-[#702D3C] uppercase tracking-wider block mb-1.5">
                           Selected 6 Varieties:
                         </span>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 text-xs text-[#777065]">
@@ -131,16 +131,16 @@ export default function CartPage() {
                         <div className="flex items-center border border-[#F2E8D8] rounded-full bg-[#FAF6EF]">
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="px-3 py-1 text-[#777065] hover:text-[#183D30]"
+                            className="px-3 py-1 text-[#777065] hover:text-[#702D3C]"
                           >
                             <Minus className="w-3.5 h-3.5" />
                           </button>
-                          <span className="px-2 text-xs font-semibold text-[#183D30]">
+                          <span className="px-2 text-xs font-semibold text-[#702D3C]">
                             {item.quantity}
                           </span>
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="px-3 py-1 text-[#777065] hover:text-[#183D30]"
+                            className="px-3 py-1 text-[#777065] hover:text-[#702D3C]"
                           >
                             <Plus className="w-3.5 h-3.5" />
                           </button>
@@ -161,7 +161,7 @@ export default function CartPage() {
                       <span className="text-xs text-[#777065] line-through block">
                         ₹{item.unitOriginalPrice * item.quantity}
                       </span>
-                      <span className="font-serif text-2xl font-semibold text-[#183D30]">
+                      <span className="font-serif text-2xl font-semibold text-[#702D3C]">
                         ₹{item.unitPrice * item.quantity}
                       </span>
                       <span className="text-[10px] text-[#702D3C] font-semibold block uppercase">
@@ -175,11 +175,11 @@ export default function CartPage() {
               {/* Right Column: Customer Details & WhatsApp Checkout */}
               <div className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-[#B89A65]/40 shadow-xl space-y-6">
                 <div>
-                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#183D30] block mb-1">
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#702D3C] block mb-1">
                     ORDER FINALIZATION
                   </span>
                   <h2
-                    className="font-serif text-2xl sm:text-3xl text-[#183D30] font-normal"
+                    className="font-serif text-2xl sm:text-3xl text-[#702D3C] font-normal"
                     style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                   >
                     Recipient & Delivery Details
@@ -197,7 +197,7 @@ export default function CartPage() {
                       placeholder="Recipient or buyer full name"
                       value={customer.fullName}
                       onChange={(e) => setCustomer({ ...customer, fullName: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function CartPage() {
                       placeholder="e.g. 9876543210"
                       value={customer.phone}
                       onChange={(e) => setCustomer({ ...customer, phone: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
@@ -225,7 +225,7 @@ export default function CartPage() {
                       placeholder="Flat/House no., Floor, Street address"
                       value={customer.address}
                       onChange={(e) => setCustomer({ ...customer, address: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
@@ -240,7 +240,7 @@ export default function CartPage() {
                         placeholder="e.g. Delhi, Bangalore"
                         value={customer.city}
                         onChange={(e) => setCustomer({ ...customer, city: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                     <div>
@@ -253,7 +253,7 @@ export default function CartPage() {
                         placeholder="6 digits"
                         value={customer.pincode}
                         onChange={(e) => setCustomer({ ...customer, pincode: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                   </div>
@@ -267,7 +267,7 @@ export default function CartPage() {
                       placeholder="Special words to be written on the wax-sealed card..."
                       value={customer.giftMessage}
                       onChange={(e) => setCustomer({ ...customer, giftMessage: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
@@ -282,7 +282,7 @@ export default function CartPage() {
                       onChange={(e) =>
                         setCustomer({ ...customer, deliveryInstructions: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
@@ -300,9 +300,9 @@ export default function CartPage() {
                     )}
                     <div className="flex justify-between text-[#777065]">
                       <span>White-Glove Shipping:</span>
-                      <span className="text-[#183D30] font-semibold">Complimentary</span>
+                      <span className="text-[#702D3C] font-semibold">Complimentary</span>
                     </div>
-                    <div className="flex justify-between text-[#183D30] pt-2 border-t border-[#F2E8D8] text-base font-semibold">
+                    <div className="flex justify-between text-[#702D3C] pt-2 border-t border-[#F2E8D8] text-base font-semibold">
                       <span>Total Payable:</span>
                       <span className="font-serif text-2xl font-bold">₹{subtotal}</span>
                     </div>
@@ -310,7 +310,7 @@ export default function CartPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl flex items-center justify-center gap-2"
+                    className="w-full py-4 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-4 h-4 text-[#B89A65]" />
                     <span>Place Order via WhatsApp ({WHATSAPP_PHONE_RAW})</span>

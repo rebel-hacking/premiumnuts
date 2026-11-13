@@ -7,17 +7,17 @@ import CartDrawer from "@/components/cart/CartDrawer";
 
 export default function TermsAndConditionsPage() {
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
       <CartDrawer />
 
       <section className="pt-32 sm:pt-40 pb-20 sm:pb-28">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-2">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-2">
             CLIENT AGREEMENT
           </span>
           <h1
-            className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal tracking-tight mb-8"
+            className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight mb-8"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             Terms and Conditions
@@ -29,7 +29,7 @@ export default function TermsAndConditionsPage() {
               hampers, or placing orders via our WhatsApp concierge, you agree to the following terms.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               1. Product & Customisation Nature
             </h3>
             <p>
@@ -39,7 +39,7 @@ export default function TermsAndConditionsPage() {
               texture may occur.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               2. Order Confirmation & Payment
             </h3>
             <p>
@@ -48,7 +48,7 @@ export default function TermsAndConditionsPage() {
               timelines with you, and receives payment via authorized digital payment methods.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               3. Deliveries & Freshness Guarantee
             </h3>
             <p>
@@ -57,7 +57,7 @@ export default function TermsAndConditionsPage() {
               must be coordinated in advance.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               4. Corporate & Bulk Orders
             </h3>
             <p>

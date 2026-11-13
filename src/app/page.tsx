@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       {/* Global Minimalist Luxury Navbar */}
       <Navbar />
 

@@ -9,7 +9,7 @@ import { HamperSize, Ingredient } from "@/types";
 import { useCart } from "@/context/CartContext";
 import SizeSelector from "./SizeSelector";
 import IngredientSelector from "./IngredientSelector";
-import { ShoppingBag, ArrowRight, ShieldCheck, Check, Sparkles, Plus, Minus, Gift } from "lucide-react";
+import { ShoppingBag, ArrowRight, ShieldCheck, Check, Sparkles, Plus, Minus } from "lucide-react";
 
 interface HamperCustomizerProps {
   onSuccessNavigate?: () => void;
@@ -112,21 +112,21 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
 
             {/* Badges: compact on mobile so top of box is visible */}
             <div className="absolute top-3 left-3 md:top-4 md:left-4 flex flex-row md:flex-col gap-1.5 z-10 flex-wrap">
-              <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-[10px] font-semibold tracking-widest uppercase bg-[#702D3C] text-white shadow-xs">
+              <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-[10px] font-semibold tracking-widest uppercase bg-[#702D3C] text-white shadow-xs border border-[#B89A65]/40">
                 Signature Hamper
               </span>
-              <span className="px-2 py-0.5 md:px-2.5 md:py-0.5 rounded-full text-[8px] md:text-[9px] font-medium tracking-wider uppercase bg-[#183D30] text-[#FAF6EF]">
+              <span className="px-2 py-0.5 md:px-2.5 md:py-0.5 rounded-full text-[8px] md:text-[9px] font-medium tracking-wider uppercase bg-[#4A1523] text-[#FAF6EF]">
                 Magnetic Keepsake Box
               </span>
             </div>
 
-            {/* Desktop-only Live Size Pill overlay (Preserved untouched for desktop) */}
-            <div className="hidden md:block absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/90 backdrop-blur-md border border-[#F2E8D8] text-[#29251F] text-xs shadow-md">
+            {/* Desktop-only Live Size Pill overlay */}
+            <div className="hidden md:block absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-[#F2E8D8] text-[#29251F] text-xs shadow-md">
               <div className="flex items-center justify-between font-medium">
-                <span className="text-[#183D30] font-serif text-sm">
+                <span className="text-[#702D3C] font-serif text-sm font-semibold">
                   {selectedSize.name} Hamper ({selectedSize.approxWeight})
                 </span>
-                <span className="font-serif text-base font-semibold text-[#183D30]">
+                <span className="font-serif text-base font-semibold text-[#702D3C]">
                   ₹{selectedSize.price}
                 </span>
               </div>
@@ -136,13 +136,13 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
             </div>
           </div>
 
-          {/* Mobile-only info card rendered cleanly below image (leaves mobile image 100% visible) */}
+          {/* Mobile-only info card rendered cleanly below image */}
           <div className="md:hidden p-3.5 rounded-xl bg-white border border-[#F2E8D8] text-[#29251F] text-xs shadow-xs">
             <div className="flex items-center justify-between font-medium">
-              <span className="text-[#183D30] font-serif text-sm font-semibold">
+              <span className="text-[#702D3C] font-serif text-sm font-semibold">
                 {selectedSize.name} Hamper ({selectedSize.approxWeight})
               </span>
-              <span className="font-serif text-base font-semibold text-[#183D30]">
+              <span className="font-serif text-base font-semibold text-[#702D3C]">
                 ₹{selectedSize.price}
               </span>
             </div>
@@ -161,7 +161,7 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
                 style={{ position: "relative" }}
                 className={`relative aspect-[4/3] rounded-xl overflow-hidden border-2 transition-all ${
                   activeImageIndex === idx
-                    ? "border-[#183D30] shadow-sm scale-[1.02]"
+                    ? "border-[#702D3C] shadow-md scale-[1.02]"
                     : "border-transparent opacity-75 hover:opacity-100"
                 }`}
               >
@@ -171,10 +171,12 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
           </div>
 
           {/* Selected Varieties Quick Summary Pills */}
-          <div className="p-4 rounded-2xl bg-white border border-[#F2E8D8] shadow-xs">
-            <div className="flex items-center justify-between text-xs text-[#183D30] font-semibold mb-2">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#B89A65]/35 shadow-xs">
+            <div className="flex items-center justify-between text-xs text-[#702D3C] font-semibold mb-2.5">
               <span className="uppercase tracking-wider">Your 6 Selected Varieties:</span>
-              <span className="font-mono">{selectedIngredientIds.length} / 6</span>
+              <span className="font-mono bg-[#702D3C]/10 text-[#702D3C] px-2 py-0.5 rounded-full">
+                {selectedIngredientIds.length} / 6
+              </span>
             </div>
             <div className="flex flex-wrap gap-1.5">
               {selectedIngredientIds.length === 0 ? (
@@ -185,7 +187,7 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
                     key={ing.id}
                     className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#FAF6EF] border border-[#F2E8D8] text-[11px] font-medium text-[#29251F]"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#183D30]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#702D3C]" />
                     {ing.name}
                   </span>
                 ))
@@ -203,7 +205,7 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
             </div>
 
             <h1
-              className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal leading-tight mb-2 tracking-tight"
+              className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal leading-tight mb-2 tracking-tight"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               {productConfig.name}
@@ -244,17 +246,17 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
                   <button
                     type="button"
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-8 h-8 rounded-full flex items-center justify-center text-[#777065] hover:text-[#183D30]"
+                    className="w-8 h-8 rounded-full flex items-center justify-center text-[#777065] hover:text-[#702D3C] transition-colors"
                   >
                     <Minus className="w-3.5 h-3.5" />
                   </button>
-                  <span className="w-10 text-center font-serif text-base font-semibold text-[#183D30]">
+                  <span className="w-10 text-center font-serif text-base font-semibold text-[#702D3C]">
                     {quantity}
                   </span>
                   <button
                     type="button"
                     onClick={() => setQuantity(quantity + 1)}
-                    className="w-8 h-8 rounded-full flex items-center justify-center text-[#777065] hover:text-[#183D30]"
+                    className="w-8 h-8 rounded-full flex items-center justify-center text-[#777065] hover:text-[#702D3C] transition-colors"
                   >
                     <Plus className="w-3.5 h-3.5" />
                   </button>
@@ -265,7 +267,7 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
               <div className="text-right">
                 <span className="text-xs text-[#777065] block">Order Subtotal</span>
                 <div className="flex items-baseline gap-2 justify-end">
-                  <span className="font-serif text-3xl font-semibold text-[#183D30]">
+                  <span className="font-serif text-3xl font-semibold text-[#702D3C]">
                     ₹{selectedSize.price * quantity}
                   </span>
                   <span className="text-xs text-[#777065] line-through">
@@ -283,7 +285,7 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
                 disabled={!isSelectionReady}
                 className={`py-4 px-6 rounded-full text-xs uppercase tracking-widest font-semibold transition-all flex items-center justify-center gap-2 ${
                   isSelectionReady
-                    ? "bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] shadow-md hover:shadow-lg"
+                    ? "bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] shadow-md hover:shadow-xl hover:-translate-y-0.5"
                     : "bg-[#777065]/20 text-[#777065] cursor-not-allowed"
                 }`}
               >
@@ -306,17 +308,17 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
                 disabled={!isSelectionReady}
                 className={`py-4 px-6 rounded-full text-xs uppercase tracking-widest font-semibold transition-all flex items-center justify-center gap-2 ${
                   isSelectionReady
-                    ? "bg-[#702D3C] hover:bg-[#521e2b] text-white shadow-md hover:shadow-lg"
+                    ? "bg-[#4A1523] hover:bg-[#320D17] text-white shadow-md hover:shadow-xl hover:-translate-y-0.5 border border-[#B89A65]/40"
                     : "bg-[#777065]/20 text-[#777065] cursor-not-allowed"
                 }`}
               >
                 <span>Buy Now via WhatsApp</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-[#B89A65]" />
               </button>
             </div>
 
             <div className="flex items-center justify-center gap-3 text-[11px] text-[#777065] pt-2 border-t border-[#F2E8D8]">
-              <ShieldCheck className="w-4 h-4 text-[#183D30]" />
+              <ShieldCheck className="w-4 h-4 text-[#702D3C]" />
               <span>Free Luxury Ribbon & Wax-Sealed Gift Card Included</span>
               <span>•</span>
               <span>Direct WhatsApp Dispatch</span>
@@ -327,4 +329,3 @@ export default function HamperCustomizer({ onSuccessNavigate }: HamperCustomizer
     </div>
   );
 }
-

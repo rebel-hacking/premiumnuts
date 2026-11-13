@@ -33,12 +33,12 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
       <CartDrawer />
 
       {/* Hero Header */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#183D30] text-[#FAF6EF] relative overflow-hidden">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#4A1523] text-[#FAF6EF] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B89A65]/15 border border-[#B89A65]/30 text-[#B89A65] text-xs uppercase tracking-[0.25em] font-semibold mb-4">
             <Sparkles className="w-3.5 h-3.5" />
@@ -82,11 +82,11 @@ export default function AboutUsPage() {
             </div>
 
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block">
+              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block">
                 OUR PROMISE
               </span>
               <h2
-                className="font-serif text-3xl sm:text-4xl text-[#183D30] font-normal leading-tight"
+                className="font-serif text-3xl sm:text-4xl text-[#702D3C] font-normal leading-tight"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
                 Why We Do Not Sell Ordinary Bags
@@ -105,7 +105,7 @@ export default function AboutUsPage() {
               <div className="pt-2">
                 <Link
                   href="/our-hamper"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md"
                 >
                   <span>Explore The Hamper</span>
                   <ArrowRight className="w-4 h-4" />
@@ -120,11 +120,11 @@ export default function AboutUsPage() {
       <section className="py-20 sm:py-28 bg-[#F2E8D8] border-t border-[#B89A65]/30">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-2">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-2">
               OUR VALUES
             </span>
             <h2
-              className="font-serif text-3xl sm:text-4xl text-[#183D30] font-normal"
+              className="font-serif text-3xl sm:text-4xl text-[#702D3C] font-normal"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               The Pillars of Our House
@@ -142,11 +142,11 @@ export default function AboutUsPage() {
                 className="p-8 rounded-2xl bg-white border border-[#B89A65]/30 shadow-xs flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#183D30]/10 text-[#183D30] flex items-center justify-center font-serif text-lg font-semibold mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-[#702D3C]/10 text-[#702D3C] flex items-center justify-center font-serif text-lg font-semibold mb-6">
                     0{i + 1}
                   </div>
                   <h3
-                    className="font-serif text-2xl text-[#183D30] font-normal mb-3"
+                    className="font-serif text-2xl text-[#702D3C] font-normal mb-3"
                     style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                   >
                     {v.title}

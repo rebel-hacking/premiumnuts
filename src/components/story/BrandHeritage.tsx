@@ -47,11 +47,11 @@ export default function BrandHeritage() {
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mb-16 sm:mb-20"
         >
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C9A80] block mb-3">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#B89A65] block mb-3">
             MAISON PHILOSOPHY
           </span>
           <h2
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#183C2D] font-normal tracking-tight leading-[1.1] mb-6"
+            className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#702D3C] font-normal tracking-tight leading-[1.1] mb-6"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             Rooted in nature. Made for moments.
@@ -98,7 +98,7 @@ export default function BrandHeritage() {
               <span className="text-[10px] tracking-widest uppercase font-semibold text-[#702D3C] block mb-1">
                 ARCHIVAL NOTE
               </span>
-              <p className="font-serif text-base text-[#183D30] font-normal leading-snug">
+              <p className="font-serif text-base text-[#702D3C] font-normal leading-snug">
                 &ldquo;Every shell carries the quiet history of a full season&apos;s sun and rain.&rdquo;
               </p>
             </div>
@@ -108,10 +108,10 @@ export default function BrandHeritage() {
               style={{ y: badgeY }}
               className="hidden sm:flex absolute -bottom-6 right-2 lg:-bottom-8 lg:-right-8 w-44 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#E8DDC8] shadow-xl flex-col items-center text-center"
             >
-              <div className="w-8 h-8 rounded-full bg-[#183C2D] text-[#F8F5ED] flex items-center justify-center font-serif text-sm font-semibold mb-2">
+              <div className="w-8 h-8 rounded-full bg-[#702D3C] text-[#F8F5ED] flex items-center justify-center font-serif text-sm font-semibold mb-2">
                 100%
               </div>
-              <span className="text-[11px] font-semibold text-[#183C2D] uppercase tracking-wider">
+              <span className="text-[11px] font-semibold text-[#702D3C] uppercase tracking-wider">
                 Single Origin
               </span>
               <span className="text-[10px] text-[#777065] mt-0.5">
@@ -131,14 +131,14 @@ export default function BrandHeritage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="p-6 rounded-xl bg-white/80 border border-[#E8DDC8] shadow-xs hover:border-[#183C2D]/40 transition-colors"
+                  className="p-6 rounded-xl bg-white/80 border border-[#E8DDC8] shadow-xs hover:border-[#702D3C]/40 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#183C2D]/10 text-[#183C2D] flex items-center justify-center">
+                    <div className="w-9 h-9 rounded-lg bg-[#702D3C]/10 text-[#702D3C] flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
                     <h3
-                      className="font-serif text-xl text-[#183C2D] font-normal"
+                      className="font-serif text-xl text-[#702D3C] font-normal"
                       style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                     >
                       {pillar.title}

@@ -7,7 +7,7 @@ import { WHATSAPP_BASE_URL } from "@/lib/whatsapp";
 
 export default function FinalHomeCTA() {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-b from-[#183D30] to-[#102B22] text-[#FAF6EF] relative overflow-hidden border-t border-[#B89A65]/30">
+    <section className="py-24 sm:py-32 bg-gradient-to-b from-[#4A1523] to-[#320D17] text-[#FAF6EF] relative overflow-hidden border-t border-[#B89A65]/30">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,154,101,0.15),transparent_70%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 text-center relative z-10">
@@ -31,7 +31,7 @@ export default function FinalHomeCTA() {
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
           <Link
             href="/our-hamper"
-            className="px-8 py-4 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#102B22] text-xs uppercase tracking-widest font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
+            className="px-8 py-4 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#320D17] text-xs uppercase tracking-widest font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
           >
             <span>EXPLORE OUR HAMPER</span>
             <ArrowRight className="w-4 h-4" />

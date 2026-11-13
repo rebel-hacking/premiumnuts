@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#102B22] text-[#FAF6EF] pt-20 pb-12 border-t border-[#B89A65]/20">
+    <footer className="bg-[#320D17] text-[#FAF6EF] pt-20 pb-12 border-t border-[#B89A65]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Top Newsletter & Maison Banner */}
         <div className="pb-14 border-b border-[#B89A65]/20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -40,7 +40,7 @@ export default function Footer() {
 
           <div className="lg:col-span-6">
             {subscribed ? (
-              <div className="p-4 rounded-xl bg-[#183D30] border border-[#B89A65]/40 flex items-center gap-3 text-xs text-[#F2E8D8]">
+              <div className="p-4 rounded-xl bg-[#702D3C] border border-[#B89A65]/40 flex items-center gap-3 text-xs text-[#F2E8D8]">
                 <Check className="w-5 h-5 text-[#B89A65]" />
                 <span>You have been subscribed to our seasonal harvest gazette.</span>
               </div>
@@ -56,7 +56,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#102B22] text-xs uppercase tracking-widest font-semibold transition-all shrink-0"
+                  className="px-6 py-3 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#320D17] text-xs uppercase tracking-widest font-semibold transition-all shrink-0"
                 >
                   Subscribe
                 </button>
@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-full bg-[#183D30] flex items-center justify-center text-[#FAF6EF] font-serif text-sm font-semibold border border-[#B89A65]/40">
+              <div className="w-8 h-8 rounded-full bg-[#702D3C] flex items-center justify-center text-[#FAF6EF] font-serif text-sm font-semibold border border-[#B89A65]/40">
                 PN
               </div>
               <span
@@ -89,7 +89,7 @@ export default function Footer() {
                 href={WHATSAPP_BASE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs border border-[#B89A65]/40 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs border border-[#B89A65]/40 transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-[#B89A65]" />
                 <span>WhatsApp: {WHATSAPP_PHONE_RAW}</span>

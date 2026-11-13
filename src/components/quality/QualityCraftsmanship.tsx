@@ -52,11 +52,11 @@ export default function QualityCraftsmanship() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C9A80] mb-3 inline-block">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#B89A65] mb-3 inline-block">
             THE PURSUIT OF PERFECTION
           </span>
           <h2
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#183C2D] font-normal tracking-tight leading-tight mb-4"
+            className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#702D3C] font-normal tracking-tight leading-tight mb-4"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             Excellence is in the details.
@@ -74,20 +74,20 @@ export default function QualityCraftsmanship() {
             return (
               <div
                 key={step.num}
-                className="relative p-7 sm:p-8 rounded-2xl bg-white border border-[#E8DDC8] shadow-xs hover:shadow-xl hover:border-[#183C2D]/50 transition-all duration-300 flex flex-col justify-between group"
+                className="relative p-7 sm:p-8 rounded-2xl bg-white border border-[#E8DDC8] shadow-xs hover:shadow-xl hover:border-[#702D3C]/50 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-serif text-3xl font-light text-[#8C9A80] group-hover:text-[#183C2D] transition-colors">
+                    <span className="font-serif text-3xl font-light text-[#B89A65] group-hover:text-[#702D3C] transition-colors">
                       {step.num}
                     </span>
-                    <div className="w-9 h-9 rounded-full bg-[#183C2D]/5 text-[#183C2D] flex items-center justify-center">
+                    <div className="w-9 h-9 rounded-full bg-[#702D3C]/5 text-[#702D3C] flex items-center justify-center">
                       <Icon className="w-4 h-4" />
                     </div>
                   </div>
 
                   <h3
-                    className="font-serif text-2xl text-[#183C2D] font-normal mb-1.5"
+                    className="font-serif text-2xl text-[#702D3C] font-normal mb-1.5"
                     style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                   >
                     {step.title}
@@ -100,8 +100,8 @@ export default function QualityCraftsmanship() {
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-[#E8DDC8]/60 flex items-center gap-2 text-[11px] text-[#8C9A80] font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#183C2D]" />
+                <div className="mt-8 pt-4 border-t border-[#E8DDC8]/60 flex items-center gap-2 text-[11px] text-[#B89A65] font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#702D3C]" />
                   <span>Verified Maison Standard</span>
                 </div>
               </div>

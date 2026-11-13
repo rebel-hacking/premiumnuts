@@ -20,7 +20,7 @@ export default function ProductEditorialStories({
         "Discover the distinctive character and intricate natural beauty of walnuts. Hand-cracked at peak moisture to preserve the tender golden kernel and its pure, creamy, oil-rich architecture.",
       cta: "Explore Walnuts",
       image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=1200&q=85",
-      accentColor: "#183C2D",
+      accentColor: "#702D3C",
       bgColor: "#F1EBDD",
       aspect: "landscape",
       quote: "A testament to slow nature: untouched shells that protect a golden heart.",
@@ -56,7 +56,7 @@ export default function ProductEditorialStories({
         "Macro cashew photography reveals rich natural cream tones and voluptuous organic curves. Sourced exclusively from coastal estates where tropical rains yield jumbo W-180 mammoth caliber kernels.",
       cta: "Explore Cashews",
       image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=1200&q=85",
-      accentColor: "#102D23",
+      accentColor: "#4A1523",
       bgColor: "#F1EBDD",
       aspect: "landscape",
       quote: "Velvety density that dissolves into sweet buttercream on the palate.",
@@ -74,7 +74,7 @@ export default function ProductEditorialStories({
         "Naturally opened pistachios bursting with vibrant jade kernels and organic shell textures. Bathed in mountain sunshine and finished with mineral-rich crystal salt that honors their botanical nobility.",
       cta: "Explore Pistachios",
       image: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=1200&q=85",
-      accentColor: "#183C2D",
+      accentColor: "#702D3C",
       bgColor: "#F8F5ED",
       aspect: "portrait",
       quote: "Sun-split along natural sutures, offering effortless opening and vivid emerald luster.",
@@ -109,12 +109,12 @@ export default function ProductEditorialStories({
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Story Section Intro */}
         <div className="max-w-2xl mb-16 sm:mb-24">
-          <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#8C9A80] mb-3">
+          <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#B89A65] mb-3">
             <Sparkles className="w-3.5 h-3.5 text-[#B69A68]" />
             <span>Sensorial Artistry</span>
           </div>
           <h2
-            className="font-serif text-3xl sm:text-5xl text-[#183C2D] font-normal tracking-tight leading-tight mb-4"
+            className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight leading-tight mb-4"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             The Botanical Anthology
@@ -153,7 +153,7 @@ export default function ProductEditorialStories({
 
                     {/* Editorial Caption Tag */}
                     <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-[#E8DDC8]/80 text-[#29251F] shadow-sm">
-                      <p className="font-serif italic text-sm sm:text-base text-[#183C2D] leading-snug">
+                      <p className="font-serif italic text-sm sm:text-base text-[#702D3C] leading-snug">
                         &ldquo;{story.quote}&rdquo;
                       </p>
                     </div>
@@ -162,12 +162,12 @@ export default function ProductEditorialStories({
 
                 {/* Editorial Narrative Side */}
                 <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                  <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#8C9A80] mb-3">
+                  <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#B89A65] mb-3">
                     {story.eyebrow}
                   </span>
 
                   <h3
-                    className="font-serif text-3xl sm:text-5xl text-[#183C2D] font-normal leading-[1.1] mb-5 tracking-tight"
+                    className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal leading-[1.1] mb-5 tracking-tight"
                     style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                   >
                     {story.headline}
@@ -181,7 +181,7 @@ export default function ProductEditorialStories({
                   <div className="grid grid-cols-3 gap-4 py-5 border-y border-[#E8DDC8] mb-8">
                     {story.details.map((detail, dIdx) => (
                       <div key={dIdx}>
-                        <span className="block text-[10px] uppercase tracking-wider text-[#8C9A80] font-semibold mb-1">
+                        <span className="block text-[10px] uppercase tracking-wider text-[#B89A65] font-semibold mb-1">
                           {detail.label}
                         </span>
                         <span className="text-xs sm:text-sm font-medium text-[#29251F]">
@@ -195,7 +195,7 @@ export default function ProductEditorialStories({
                   <div>
                     <button
                       onClick={() => onFilterCategory(story.categoryKey)}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#183C2D] hover:bg-[#102D23] text-[#F8F5ED] text-xs uppercase tracking-widest font-medium transition-all shadow-xs hover:gap-3"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#F8F5ED] text-xs uppercase tracking-widest font-medium transition-all shadow-xs hover:gap-3"
                     >
                       <span>{story.cta}</span>
                       <ArrowUpRight className="w-4 h-4" />

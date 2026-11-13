@@ -25,7 +25,7 @@ export default function CorporateGiftingSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 sm:py-32 bg-[#183D30] text-[#FAF6EF] relative overflow-x-clip"
+      className="py-24 sm:py-32 bg-[#4A1523] text-[#FAF6EF] relative overflow-x-clip"
     >
       {/* Subtle gold watermark */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_top_right,rgba(184,154,101,0.18),transparent_70%)] pointer-events-none" />
@@ -73,7 +73,7 @@ export default function CorporateGiftingSection() {
             <div>
               <Link
                 href="/corporate-gifting"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#102B22] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#38101B] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl"
               >
                 <span>EXPLORE CORPORATE GIFTING</span>
                 <ArrowRight className="w-4 h-4" />
@@ -84,7 +84,7 @@ export default function CorporateGiftingSection() {
           {/* Visual Column: Sticky on desktop, natural flow on mobile/tablet */}
           <div className="lg:col-span-6 relative lg:sticky lg:top-28">
             <div
-              className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#B89A65]/40 shadow-2xl bg-[#102B22]"
+              className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-[#B89A65]/40 shadow-2xl bg-[#38101B]"
               style={{ position: "relative" }}
             >
               <motion.div style={{ scale: visualScale }} className="absolute inset-0">
@@ -97,12 +97,12 @@ export default function CorporateGiftingSection() {
                 />
               </motion.div>
               {/* Desktop-only gradient overlay */}
-              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#102B22]/80 via-transparent to-transparent" />
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#38101B]/80 via-transparent to-transparent" />
 
               {/* Desktop-only overlay pill (Untouched on desktop) */}
               <motion.div
                 style={{ y: cardY }}
-                className="hidden md:block absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#102B22]/90 backdrop-blur-md border border-[#B89A65]/40 text-xs text-[#FAF6EF]"
+                className="hidden md:block absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#38101B]/90 backdrop-blur-md border border-[#B89A65]/40 text-xs text-[#FAF6EF]"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-serif text-base text-[#FAF6EF]">
@@ -117,7 +117,7 @@ export default function CorporateGiftingSection() {
             </div>
 
             {/* Mobile-only info card below image (unblocks corporate image on mobile) */}
-            <div className="md:hidden mt-3 p-3.5 rounded-2xl bg-[#102B22] border border-[#B89A65]/40 text-xs text-[#FAF6EF] shadow-xs">
+            <div className="md:hidden mt-3 p-3.5 rounded-2xl bg-[#38101B] border border-[#B89A65]/40 text-xs text-[#FAF6EF] shadow-xs">
               <div className="flex items-center justify-between">
                 <span className="font-serif text-base text-[#FAF6EF]">
                   Bespoke Bulk Tier Orders

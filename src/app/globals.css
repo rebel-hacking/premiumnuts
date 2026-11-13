@@ -3,8 +3,9 @@
 :root {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --color-brand-forest: #183D30;
-  --color-brand-deep: #102B22;
+  --color-brand-forest: #702D3C;
+  --color-brand-deep: #4A1523;
+  --color-brand-wine: #4A1523;
   --color-brand-beige: #F2E8D8;
   --color-brand-cream: #FAF6EF;
   --color-brand-burgundy: #702D3C;
@@ -14,6 +15,11 @@
   --color-brand-canvas: #FEFEFE;
   --background: #FAF6EF;
   --foreground: #29251F;
+}
+
+::selection {
+  background-color: #702D3C;
+  color: #FAF6EF;
 }
 
 .font-serif {
@@ -50,5 +56,70 @@ body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #183D30;
+  background: #702D3C;
+}
+
+/* ============ VAULT OPENING ANIMATION ============ */
+#vault {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  perspective: 1200px;
+}
+
+#vault.opening .door-left {
+  animation: vaultOpenLeft 1s 0.9s cubic-bezier(0.7, 0, 0.15, 1) forwards;
+}
+
+#vault.opening .door-right {
+  animation: vaultOpenRight 1s 0.9s cubic-bezier(0.7, 0, 0.15, 1) forwards;
+}
+
+#vault.opening #seal {
+  animation: vaultSealPunch 0.55s ease-out forwards, vaultSealFade 0.4s 0.75s ease forwards;
+}
+
+#vault #seal-crack {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+}
+
+#vault.opening #seal-crack {
+  animation: vaultCrackDraw 0.45s 0.25s ease-out forwards;
+}
+
+@keyframes vaultSealPunch {
+  0% { transform: scale(0.85); }
+  40% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes vaultCrackDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes vaultSealFade {
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes vaultOpenLeft {
+  to {
+    transform: translateX(-100%) rotateY(-8deg);
+  }
+}
+
+@keyframes vaultOpenRight {
+  to {
+    transform: translateX(100%) rotateY(8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #vault { display: none !important; }
 }

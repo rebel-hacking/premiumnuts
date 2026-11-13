@@ -11,20 +11,20 @@ import { Sparkles, Gift, ShieldCheck } from "lucide-react";
 
 export default function OurHamperPage() {
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF] overflow-x-clip">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF] overflow-x-clip">
       <Navbar />
       <CartDrawer />
 
       {/* Hero Header */}
       <section className="pt-32 sm:pt-40 pb-12 sm:pb-16 bg-[#FAF6EF]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#183D30]/10 border border-[#183D30]/20 text-[#183D30] text-xs uppercase tracking-[0.25em] font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#702D3C]/10 border border-[#702D3C]/20 text-[#702D3C] text-xs uppercase tracking-[0.25em] font-semibold mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#B89A65]" />
             <span>BESPOKE GOURMET SELECTION</span>
           </div>
 
           <h1
-            className="font-serif text-4xl sm:text-6xl text-[#183D30] font-normal tracking-tight max-w-3xl mx-auto leading-tight mb-4"
+            className="font-serif text-4xl sm:text-6xl text-[#702D3C] font-normal tracking-tight max-w-3xl mx-auto leading-tight mb-4"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             The Signature Hamper

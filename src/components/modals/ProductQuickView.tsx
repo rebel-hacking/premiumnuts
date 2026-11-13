@@ -54,7 +54,7 @@ export default function ProductQuickView({
           {/* Badges */}
           <div className="absolute top-5 left-5 flex flex-col gap-1.5 z-10">
             {product.badge && (
-              <span className="px-3 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-[#183C2D] text-[#F8F5ED]">
+              <span className="px-3 py-1 rounded-full text-[10px] font-semibold tracking-widest uppercase bg-[#702D3C] text-[#F8F5ED]">
                 {product.badge}
               </span>
             )}
@@ -69,13 +69,13 @@ export default function ProductQuickView({
         {/* Content Side */}
         <div className="w-full md:w-1/2 p-7 sm:p-9 flex flex-col justify-between overflow-y-auto">
           <div>
-            <div className="flex items-center justify-between text-xs text-[#8C9A80] font-medium mb-1.5 uppercase tracking-widest">
+            <div className="flex items-center justify-between text-xs text-[#B89A65] font-medium mb-1.5 uppercase tracking-widest">
               <span>{product.categoryLabel}</span>
               <span className="truncate max-w-[160px]">{product.origin}</span>
             </div>
 
             <h2
-              className="font-serif text-3xl sm:text-4xl text-[#183C2D] font-normal leading-tight mb-2"
+              className="font-serif text-3xl sm:text-4xl text-[#702D3C] font-normal leading-tight mb-2"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               {product.name}
@@ -90,7 +90,7 @@ export default function ProductQuickView({
 
             {/* Tasting Notes */}
             <div className="mb-6">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-[#183C2D] block mb-2">
+              <span className="text-[11px] uppercase tracking-wider font-semibold text-[#702D3C] block mb-2">
                 Tasting Notes:
               </span>
               <div className="flex flex-wrap gap-2">
@@ -107,7 +107,7 @@ export default function ProductQuickView({
 
             {/* Pairing Suggestions */}
             <div className="mb-6">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-[#183C2D] block mb-2">
+              <span className="text-[11px] uppercase tracking-wider font-semibold text-[#702D3C] block mb-2">
                 Gastronomic Pairings:
               </span>
               <div className="flex flex-wrap gap-2 text-xs text-[#777065]">
@@ -135,8 +135,8 @@ export default function ProductQuickView({
                   onClick={() => setSelectedOptionIndex(idx)}
                   className={`p-2.5 rounded-lg border text-left transition-all ${
                     selectedOptionIndex === idx
-                      ? "bg-[#183C2D] text-white border-[#183C2D]"
-                      : "bg-white text-[#29251F] border-[#E8DDC8] hover:border-[#8C9A80]"
+                      ? "bg-[#702D3C] text-white border-[#702D3C]"
+                      : "bg-white text-[#29251F] border-[#E8DDC8] hover:border-[#B89A65]"
                   }`}
                 >
                   <div className="text-xs font-semibold">{opt.weight}</div>
@@ -149,7 +149,7 @@ export default function ProductQuickView({
             <div className="flex items-center justify-between gap-4">
               <div>
                 <span className="text-xs text-[#777065] block">Price</span>
-                <span className="font-serif text-3xl font-semibold text-[#183C2D]">
+                <span className="font-serif text-3xl font-semibold text-[#702D3C]">
                   ${currentOption.price}
                 </span>
               </div>
@@ -159,8 +159,8 @@ export default function ProductQuickView({
                 disabled={added}
                 className={`flex-1 py-3.5 px-6 rounded-full text-xs font-semibold uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
                   added
-                    ? "bg-[#8C9A80] text-white"
-                    : "bg-[#183C2D] hover:bg-[#102D23] text-[#F8F5ED] shadow-md hover:shadow-lg"
+                    ? "bg-[#B89A65] text-white"
+                    : "bg-[#702D3C] hover:bg-[#4A1523] text-[#F8F5ED] shadow-md hover:shadow-lg"
                 }`}
               >
                 {added ? (

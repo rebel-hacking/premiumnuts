@@ -34,12 +34,12 @@ export default function ContactUsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
       <CartDrawer />
 
       {/* Header */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#183D30] text-[#FAF6EF] relative overflow-hidden">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#4A1523] text-[#FAF6EF] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center relative z-10">
           <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#B89A65] block mb-3">
             CLIENT CONCIERGE
@@ -63,7 +63,7 @@ export default function ContactUsPage() {
             {/* Direct Channels */}
             <div className="lg:col-span-5 space-y-6">
               <div className="p-8 rounded-3xl bg-white border border-[#F2E8D8] shadow-sm space-y-6">
-                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#183D30] block">
+                <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#702D3C] block">
                   INSTANT COMMUNICATION
                 </span>
 
@@ -72,7 +72,7 @@ export default function ContactUsPage() {
                   href={WHATSAPP_BASE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-5 rounded-2xl bg-[#183D30] text-[#FAF6EF] flex items-center gap-4 hover:bg-[#102B22] transition-colors group"
+                  className="p-5 rounded-2xl bg-[#702D3C] text-[#FAF6EF] flex items-center gap-4 hover:bg-[#4A1523] transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#B89A65]">
                     <MessageCircle className="w-6 h-6" />
@@ -92,7 +92,7 @@ export default function ContactUsPage() {
 
                 <div className="space-y-4 pt-2 text-xs text-[#777065]">
                   <div className="flex items-start gap-3">
-                    <Phone className="w-4 h-4 text-[#183D30] mt-0.5" />
+                    <Phone className="w-4 h-4 text-[#702D3C] mt-0.5" />
                     <div>
                       <strong className="text-[#29251F] block">Telephone Helpline</strong>
                       <span>+91 {WHATSAPP_PHONE_RAW} (Mon–Sat, 10 AM – 7 PM IST)</span>
@@ -100,7 +100,7 @@ export default function ContactUsPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Mail className="w-4 h-4 text-[#183D30] mt-0.5" />
+                    <Mail className="w-4 h-4 text-[#702D3C] mt-0.5" />
                     <div>
                       <strong className="text-[#29251F] block">Email Concierge</strong>
                       <span>concierge@premiumnuts.in</span>
@@ -108,7 +108,7 @@ export default function ContactUsPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-4 h-4 text-[#183D30] mt-0.5" />
+                    <MapPin className="w-4 h-4 text-[#702D3C] mt-0.5" />
                     <div>
                       <strong className="text-[#29251F] block">Atelier & Distribution</strong>
                       <span>All-India Climate-Controlled Express Courier</span>
@@ -120,9 +120,9 @@ export default function ContactUsPage() {
               {/* Corporate Shortcut */}
               <div className="p-6 rounded-3xl bg-[#F2E8D8] border border-[#B89A65]/40 flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <Building2 className="w-6 h-6 text-[#183D30]" />
+                  <Building2 className="w-6 h-6 text-[#702D3C]" />
                   <div>
-                    <h4 className="font-serif text-lg text-[#183D30] font-normal">
+                    <h4 className="font-serif text-lg text-[#702D3C] font-normal">
                       Planning 25+ Hampers?
                     </h4>
                     <span className="text-[11px] text-[#777065]">
@@ -132,7 +132,7 @@ export default function ContactUsPage() {
                 </div>
                 <Link
                   href="/corporate-gifting"
-                  className="px-4 py-2 rounded-full bg-[#183D30] text-[#FAF6EF] text-[11px] uppercase tracking-wider font-semibold whitespace-nowrap hover:bg-[#102B22]"
+                  className="px-4 py-2 rounded-full bg-[#702D3C] text-[#FAF6EF] text-[11px] uppercase tracking-wider font-semibold whitespace-nowrap hover:bg-[#4A1523]"
                 >
                   Bulk Quote
                 </Link>
@@ -142,7 +142,7 @@ export default function ContactUsPage() {
             {/* Direct Form */}
             <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-[#F2E8D8] shadow-sm">
               <h2
-                className="font-serif text-2xl sm:text-3xl text-[#183D30] font-normal mb-2"
+                className="font-serif text-2xl sm:text-3xl text-[#702D3C] font-normal mb-2"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
                 Send Us a Message
@@ -152,9 +152,9 @@ export default function ContactUsPage() {
               </p>
 
               {submitted ? (
-                <div className="p-6 rounded-2xl bg-[#183D30]/10 border border-[#183D30]/30 text-center space-y-3">
-                  <CheckCircle2 className="w-10 h-10 text-[#183D30] mx-auto" />
-                  <h3 className="font-serif text-2xl text-[#183D30]">Enquiry Connected</h3>
+                <div className="p-6 rounded-2xl bg-[#702D3C]/10 border border-[#702D3C]/30 text-center space-y-3">
+                  <CheckCircle2 className="w-10 h-10 text-[#702D3C] mx-auto" />
+                  <h3 className="font-serif text-2xl text-[#702D3C]">Enquiry Connected</h3>
                   <p className="text-xs text-[#777065] max-w-sm mx-auto">
                     Your inquiry has been routed to our WhatsApp representative. We look forward to assisting you promptly.
                   </p>
@@ -172,7 +172,7 @@ export default function ContactUsPage() {
                         placeholder="e.g. Rahul Sharma"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                     <div>
@@ -185,7 +185,7 @@ export default function ContactUsPage() {
                         placeholder="you@email.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                   </div>
@@ -200,7 +200,7 @@ export default function ContactUsPage() {
                         placeholder="e.g. 9876543210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                     <div>
@@ -210,7 +210,7 @@ export default function ContactUsPage() {
                       <select
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                       >
                         <option value="Personal Gifting Query">Personal Gifting Query</option>
                         <option value="Ingredient Availability">Ingredient Availability</option>
@@ -230,13 +230,13 @@ export default function ContactUsPage() {
                       placeholder="How can we assist your gifting plans today?..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md flex items-center justify-center gap-2"
+                    className="w-full py-4 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md flex items-center justify-center gap-2"
                   >
                     <Send className="w-4 h-4 text-[#B89A65]" />
                     <span>Send Query to WhatsApp ({WHATSAPP_PHONE_RAW})</span>

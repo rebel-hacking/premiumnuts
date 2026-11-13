@@ -176,7 +176,7 @@ export const GIFTING_TIERS = [
     title: "Personal Gifting",
     subtitle: "The Handcrafted Presentation Sleeve",
     description:
-      "A thoughtful gesture for intimate celebrations, dinner host tokens, and birthdays. Includes your choice of single-origin reserve nut or curated duo, presented with a hand-tied forest green grosgrain ribbon.",
+      "A thoughtful gesture for intimate celebrations, dinner host tokens, and birthdays. Includes your choice of single-origin reserve nut or curated duo, presented with a hand-tied royal burgundy satin ribbon.",
     features: [
       "Rigid textured paperboard box in Warm Beige & Ivory",
       "Hand-calligraphed personalized wax-sealed card",

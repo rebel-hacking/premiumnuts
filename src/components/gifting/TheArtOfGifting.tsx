@@ -64,7 +64,7 @@ export default function TheArtOfGifting({
   };
 
   return (
-    <section id="gifting" className="py-24 sm:py-32 bg-[#183C2D] text-[#F8F5ED] relative overflow-hidden">
+    <section id="gifting" className="py-24 sm:py-32 bg-[#702D3C] text-[#F8F5ED] relative overflow-hidden">
       {/* Subtle Luxury Watermark / Motif */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_top_right,rgba(182,154,104,0.15),transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[radial-gradient(circle_at_bottom_left,rgba(100,31,53,0.2),transparent_70%)] pointer-events-none" />
@@ -92,10 +92,10 @@ export default function TheArtOfGifting({
           {GIFTING_TIERS.map((tier) => (
             <div
               key={tier.id}
-              className="flex flex-col bg-[#102D23] rounded-2xl border border-[#8C9A80]/20 overflow-hidden shadow-xl hover:border-[#B69A68]/60 transition-all duration-500 hover:-translate-y-1.5 group"
+              className="flex flex-col bg-[#4A1523] rounded-2xl border border-[#B89A65]/20 overflow-hidden shadow-xl hover:border-[#B69A68]/60 transition-all duration-500 hover:-translate-y-1.5 group"
             >
               {/* Image Area */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#183C2D]">
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#702D3C]">
                 <Image
                   src={tier.imageUrl}
                   alt={tier.title}
@@ -103,10 +103,10 @@ export default function TheArtOfGifting({
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#102D23] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#4A1523] via-transparent to-transparent opacity-80" />
 
                 {/* Starting price tag */}
-                <div className="absolute bottom-3 left-4 px-3 py-1 rounded-full bg-[#183C2D]/90 backdrop-blur-md border border-[#B69A68]/40 text-xs font-serif text-[#B69A68]">
+                <div className="absolute bottom-3 left-4 px-3 py-1 rounded-full bg-[#702D3C]/90 backdrop-blur-md border border-[#B69A68]/40 text-xs font-serif text-[#B69A68]">
                   From ${tier.priceStartingAt}
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function TheArtOfGifting({
                   className={`w-full py-3.5 px-6 rounded-full text-xs uppercase tracking-widest font-semibold transition-all flex items-center justify-center gap-2 ${
                     tier.id === "corporate"
                       ? "bg-[#641F35] hover:bg-[#451626] text-[#F8F5ED] shadow-md hover:shadow-lg"
-                      : "bg-[#F8F5ED] hover:bg-white text-[#183C2D] shadow-xs"
+                      : "bg-[#F8F5ED] hover:bg-white text-[#702D3C] shadow-xs"
                   }`}
                 >
                   <span>{tier.ctaText}</span>
@@ -156,7 +156,7 @@ export default function TheArtOfGifting({
         </div>
 
         {/* Corporate Bespoke Banner */}
-        <div className="mt-16 sm:mt-20 p-8 sm:p-10 rounded-2xl bg-[#102D23]/70 border border-[#B69A68]/30 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm">
+        <div className="mt-16 sm:mt-20 p-8 sm:p-10 rounded-2xl bg-[#4A1523]/70 border border-[#B69A68]/30 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#B69A68]/15 border border-[#B69A68]/40 flex items-center justify-center text-[#B69A68] shrink-0">
               <Building2 className="w-6 h-6" />
@@ -173,7 +173,7 @@ export default function TheArtOfGifting({
 
           <button
             onClick={() => setIsCorporateModalOpen(true)}
-            className="px-7 py-3 rounded-full bg-[#B69A68] hover:bg-[#a58957] text-[#102D23] text-xs font-semibold uppercase tracking-wider transition-all shrink-0 shadow-sm"
+            className="px-7 py-3 rounded-full bg-[#B69A68] hover:bg-[#a58957] text-[#4A1523] text-xs font-semibold uppercase tracking-wider transition-all shrink-0 shadow-sm"
           >
             Open Corporate Concierge
           </button>
@@ -196,11 +196,11 @@ export default function TheArtOfGifting({
 
             {enquirySuccess ? (
               <div className="text-center py-10">
-                <div className="w-16 h-16 rounded-full bg-[#183C2D]/10 text-[#183C2D] flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#702D3C]/10 text-[#702D3C] flex items-center justify-center mx-auto mb-4">
                   <Check className="w-8 h-8" />
                 </div>
                 <h3
-                  className="font-serif text-3xl text-[#183C2D] font-normal mb-2"
+                  className="font-serif text-3xl text-[#702D3C] font-normal mb-2"
                   style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                 >
                   Enquiry Received
@@ -215,18 +215,18 @@ export default function TheArtOfGifting({
                     setIsCorporateModalOpen(false);
                     setEnquirySuccess(false);
                   }}
-                  className="px-8 py-3 rounded-full bg-[#183C2D] text-[#F8F5ED] text-xs uppercase tracking-widest font-semibold"
+                  className="px-8 py-3 rounded-full bg-[#702D3C] text-[#F8F5ED] text-xs uppercase tracking-widest font-semibold"
                 >
                   Return to Boutique
                 </button>
               </div>
             ) : (
               <div>
-                <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#8C9A80] block mb-1">
+                <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#B89A65] block mb-1">
                   CORPORATE GIFTING CONCIERGE
                 </span>
                 <h3
-                  className="font-serif text-2xl sm:text-3xl text-[#183C2D] font-normal mb-2"
+                  className="font-serif text-2xl sm:text-3xl text-[#702D3C] font-normal mb-2"
                   style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                 >
                   Bespoke Corporate Presentation
@@ -242,7 +242,7 @@ export default function TheArtOfGifting({
                   <div>
                     <div className="flex justify-between items-center text-xs font-medium text-[#29251F] mb-1.5">
                       <span>Order Volume (Units):</span>
-                      <span className="font-serif text-base font-semibold text-[#183C2D]">
+                      <span className="font-serif text-base font-semibold text-[#702D3C]">
                         {hamperCount} Hampers
                       </span>
                     </div>
@@ -253,7 +253,7 @@ export default function TheArtOfGifting({
                       step={5}
                       value={hamperCount}
                       onChange={(e) => setHamperCount(Number(e.target.value))}
-                      className="w-full accent-[#183C2D] cursor-pointer"
+                      className="w-full accent-[#702D3C] cursor-pointer"
                     />
                     <div className="flex justify-between text-[10px] text-[#777065]">
                       <span>20 min</span>
@@ -279,7 +279,7 @@ export default function TheArtOfGifting({
                           onClick={() => setSelectedBoxStyle(box.key as any)}
                           className={`p-2.5 rounded-lg border text-left transition-all ${
                             selectedBoxStyle === box.key
-                              ? "bg-[#183C2D] text-white border-[#183C2D]"
+                              ? "bg-[#702D3C] text-white border-[#702D3C]"
                               : "bg-white text-[#29251F] border-[#E8DDC8]"
                           }`}
                         >
@@ -297,7 +297,7 @@ export default function TheArtOfGifting({
                         type="checkbox"
                         checked={customRibbon}
                         onChange={(e) => setCustomRibbon(e.target.checked)}
-                        className="rounded border-[#8C9A80] text-[#183C2D] focus:ring-0"
+                        className="rounded border-[#B89A65] text-[#702D3C] focus:ring-0"
                       />
                       <span>Embossed Foil Ribbon (+ $6)</span>
                     </label>
@@ -306,7 +306,7 @@ export default function TheArtOfGifting({
                         type="checkbox"
                         checked={engravedBox}
                         onChange={(e) => setEngravedBox(e.target.checked)}
-                        className="rounded border-[#8C9A80] text-[#183C2D] focus:ring-0"
+                        className="rounded border-[#B89A65] text-[#702D3C] focus:ring-0"
                       />
                       <span>Laser-Engraved Company Logo (+ $12)</span>
                     </label>
@@ -316,9 +316,9 @@ export default function TheArtOfGifting({
                   <div className="pt-3 border-t border-[#E8DDC8] flex justify-between items-center text-xs">
                     <span className="text-[#777065]">
                       Estimated Unit:{" "}
-                      <strong className="text-[#183C2D]">${estimatedUnitTotal}</strong>
+                      <strong className="text-[#702D3C]">${estimatedUnitTotal}</strong>
                     </span>
-                    <span className="font-serif text-lg font-semibold text-[#183C2D]">
+                    <span className="font-serif text-lg font-semibold text-[#702D3C]">
                       Est. Total: ${estimatedOrderTotal.toLocaleString()}
                     </span>
                   </div>
@@ -339,7 +339,7 @@ export default function TheArtOfGifting({
                         onChange={(e) =>
                           setFormState({ ...formState, fullName: e.target.value })
                         }
-                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#183C2D]"
+                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                     <div>
@@ -354,7 +354,7 @@ export default function TheArtOfGifting({
                         onChange={(e) =>
                           setFormState({ ...formState, companyName: e.target.value })
                         }
-                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#183C2D]"
+                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                   </div>
@@ -372,7 +372,7 @@ export default function TheArtOfGifting({
                         onChange={(e) =>
                           setFormState({ ...formState, email: e.target.value })
                         }
-                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#183C2D]"
+                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                     <div>
@@ -386,7 +386,7 @@ export default function TheArtOfGifting({
                         onChange={(e) =>
                           setFormState({ ...formState, phone: e.target.value })
                         }
-                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#183C2D]"
+                        className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#702D3C]"
                       />
                     </div>
                   </div>
@@ -402,13 +402,13 @@ export default function TheArtOfGifting({
                       onChange={(e) =>
                         setFormState({ ...formState, notes: e.target.value })
                       }
-                      className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#183C2D]"
+                      className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E8DDC8] text-xs focus:outline-none focus:border-[#702D3C]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-full bg-[#183C2D] hover:bg-[#102D23] text-[#F8F5ED] text-xs font-semibold uppercase tracking-widest transition-all flex items-center justify-center gap-2 shadow-md"
+                    className="w-full py-3.5 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#F8F5ED] text-xs font-semibold uppercase tracking-widest transition-all flex items-center justify-center gap-2 shadow-md"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>Submit Formal Corporate Enquiry</span>

@@ -56,12 +56,12 @@ export default function CorporateGiftingPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
       <CartDrawer />
 
       {/* Hero Header */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#183D30] text-[#FAF6EF] relative overflow-hidden">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#4A1523] text-[#FAF6EF] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_top_right,rgba(184,154,101,0.2),transparent_70%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
@@ -85,7 +85,7 @@ export default function CorporateGiftingPage() {
 
             <a
               href="#quote-form"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#102B22] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#B89A65] hover:bg-[#a58957] text-[#4A1523] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl"
             >
               <span>REQUEST A BULK QUOTE</span>
               <ArrowRight className="w-4 h-4" />
@@ -98,11 +98,11 @@ export default function CorporateGiftingPage() {
       <section className="py-20 sm:py-28 bg-[#FAF6EF]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-2">
+            <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-2">
               BESPOKE APPRECIATION
             </span>
             <h2
-              className="font-serif text-3xl sm:text-4xl text-[#183D30] font-normal"
+              className="font-serif text-3xl sm:text-4xl text-[#702D3C] font-normal"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               Tailored for Every Enterprise Milestone
@@ -125,7 +125,7 @@ export default function CorporateGiftingPage() {
                 </div>
                 <div className="p-6">
                   <h3
-                    className="font-serif text-2xl text-[#183D30] font-normal mb-2"
+                    className="font-serif text-2xl text-[#702D3C] font-normal mb-2"
                     style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                   >
                     {pillar.title}
@@ -145,11 +145,11 @@ export default function CorporateGiftingPage() {
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#B89A65]/40 shadow-xl">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-2">
+              <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-2">
                 BULK ENQUIRY FORM
               </span>
               <h2
-                className="font-serif text-3xl sm:text-4xl text-[#183D30] font-normal"
+                className="font-serif text-3xl sm:text-4xl text-[#702D3C] font-normal"
                 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
               >
                 Request Custom Bulk Pricing
@@ -171,7 +171,7 @@ export default function CorporateGiftingPage() {
                     placeholder="Your full name"
                     value={enquiry.fullName}
                     onChange={(e) => setEnquiry({ ...enquiry, fullName: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   />
                 </div>
                 <div>
@@ -184,7 +184,7 @@ export default function CorporateGiftingPage() {
                     placeholder="e.g. Reliance, Tata, Startup Corp"
                     value={enquiry.companyName}
                     onChange={(e) => setEnquiry({ ...enquiry, companyName: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   />
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function CorporateGiftingPage() {
                     placeholder="corporate@company.com"
                     value={enquiry.email}
                     onChange={(e) => setEnquiry({ ...enquiry, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   />
                 </div>
                 <div>
@@ -213,7 +213,7 @@ export default function CorporateGiftingPage() {
                     placeholder="e.g. 9876543210"
                     value={enquiry.phone}
                     onChange={(e) => setEnquiry({ ...enquiry, phone: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   />
                 </div>
               </div>
@@ -226,7 +226,7 @@ export default function CorporateGiftingPage() {
                   <select
                     value={enquiry.estimatedHampers}
                     onChange={(e) => setEnquiry({ ...enquiry, estimatedHampers: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   >
                     <option value="10–25">10–25 Hampers</option>
                     <option value="26–50">26–50 Hampers</option>
@@ -244,7 +244,7 @@ export default function CorporateGiftingPage() {
                   <select
                     value={enquiry.preferredSize}
                     onChange={(e) => setEnquiry({ ...enquiry, preferredSize: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   >
                     <option value="Small (₹499)">Small (₹499)</option>
                     <option value="Medium (₹699)">Medium (₹699 - Most Popular)</option>
@@ -261,7 +261,7 @@ export default function CorporateGiftingPage() {
                     type="date"
                     value={enquiry.deliveryDate}
                     onChange={(e) => setEnquiry({ ...enquiry, deliveryDate: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                   />
                 </div>
               </div>
@@ -275,17 +275,17 @@ export default function CorporateGiftingPage() {
                   placeholder="e.g. Diwali Festivities, Annual Summit, Client Welcome"
                   value={enquiry.occasion}
                   onChange={(e) => setEnquiry({ ...enquiry, occasion: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                 />
               </div>
 
               <div className="p-3.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8]">
-                <label className="flex items-center gap-2.5 text-xs text-[#183D30] font-medium cursor-pointer">
+                <label className="flex items-center gap-2.5 text-xs text-[#702D3C] font-medium cursor-pointer">
                   <input
                     type="checkbox"
                     checked={enquiry.customBranding}
                     onChange={(e) => setEnquiry({ ...enquiry, customBranding: e.target.checked })}
-                    className="rounded border-[#B89A65] text-[#183D30] focus:ring-0"
+                    className="rounded border-[#B89A65] text-[#702D3C] focus:ring-0"
                   />
                   <span>Require company logo hot-stamping on royal burgundy sleeves & cards</span>
                 </label>
@@ -300,13 +300,13 @@ export default function CorporateGiftingPage() {
                   placeholder="Tell us about multi-city shipments, custom card messaging, or specific ingredient preferences..."
                   value={enquiry.notes}
                   onChange={(e) => setEnquiry({ ...enquiry, notes: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#183D30]"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#FAF6EF] border border-[#F2E8D8] text-xs focus:outline-none focus:border-[#702D3C]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4 text-[#B89A65]" />
                 <span>Submit Bulk Enquiry to WhatsApp ({WHATSAPP_PHONE_RAW})</span>

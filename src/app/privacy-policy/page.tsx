@@ -7,17 +7,17 @@ import CartDrawer from "@/components/cart/CartDrawer";
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
       <CartDrawer />
 
       <section className="pt-32 sm:pt-40 pb-20 sm:pb-28">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-2">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-2">
             LEGAL DISCLOSURE
           </span>
           <h1
-            className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal tracking-tight mb-8"
+            className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight mb-8"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             Privacy Policy
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
               details are handled when visiting our website or ordering via WhatsApp.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               1. Information We Collect
             </h3>
             <p>
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
               city, PIN code, and personalized gift card messages.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               2. How Your Information Is Used
             </h3>
             <p>
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
               to third-party advertising brokers.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               3. WhatsApp Communications
             </h3>
             <p>
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
               ensuring your discussions with our concierge remain private.
             </p>
 
-            <h3 className="font-serif text-xl text-[#183D30] font-normal pt-2">
+            <h3 className="font-serif text-xl text-[#702D3C] font-normal pt-2">
               4. Data Retention & Contact
             </h3>
             <p>

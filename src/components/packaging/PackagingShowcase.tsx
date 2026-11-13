@@ -60,7 +60,7 @@ export default function PackagingShowcase() {
                 <span className="text-[10px] uppercase tracking-widest font-semibold text-[#702D3C] block mb-0.5">
                   THE SIGNATURE BOX
                 </span>
-                <p className="font-serif text-base text-[#183D30] font-normal">
+                <p className="font-serif text-base text-[#702D3C] font-normal">
                   Royal Burgundy Exterior with Satin Gold 6-Compartment Interior
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function PackagingShowcase() {
               <span className="text-[10px] uppercase tracking-widest font-semibold text-[#702D3C] block mb-0.5">
                 THE SIGNATURE BOX
               </span>
-              <p className="font-serif text-base text-[#183D30] font-normal">
+              <p className="font-serif text-base text-[#702D3C] font-normal">
                 Royal Burgundy Exterior with Satin Gold 6-Compartment Interior
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function PackagingShowcase() {
             </div>
 
             <h2
-              className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal tracking-tight leading-[1.1] mb-5"
+              className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight leading-[1.1] mb-5"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               The Art of Packaging
@@ -121,11 +121,11 @@ export default function PackagingShowcase() {
                   transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   className="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-[#F2E8D8] shadow-xs"
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#183D30] text-[#FAF6EF] flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#702D3C] text-[#FAF6EF] flex items-center justify-center shrink-0 mt-0.5">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-base text-[#183D30] font-medium leading-snug">
+                    <h4 className="font-serif text-base text-[#702D3C] font-medium leading-snug">
                       {feat.title}
                     </h4>
                     <p className="text-xs text-[#777065] font-light mt-0.5">{feat.desc}</p>
@@ -137,7 +137,7 @@ export default function PackagingShowcase() {
             <div>
               <Link
                 href="/our-hamper"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-lg"
               >
                 <span>Curate Your Hamper Now</span>
                 <ArrowRight className="w-4 h-4" />

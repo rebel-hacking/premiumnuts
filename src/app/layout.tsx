@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
+import VaultLoader from "@/components/common/VaultLoader";
 
 export const metadata: Metadata = {
   title: "PREMIUM NUTS | Luxury Gourmet Nuts & Dry Fruits Gift Hampers",
@@ -36,7 +37,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+      <body className="min-h-screen flex flex-col bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
+        <VaultLoader />
         <CartProvider>{children}</CartProvider>
       </body>
     </html>

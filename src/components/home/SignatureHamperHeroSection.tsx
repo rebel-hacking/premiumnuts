@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import productConfig from "@/data/product-config.json";
 import { HamperSize } from "@/types";
-import { Sparkles, ArrowRight, Check, ShieldCheck, Gift } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 export default function SignatureHamperHeroSection() {
   const sizes = productConfig.sizes as HamperSize[];
@@ -49,24 +49,24 @@ export default function SignatureHamperHeroSection() {
 
               {/* Floating Badges */}
               <div className="absolute top-3 left-3 md:top-5 md:left-5 flex flex-row md:flex-col gap-1.5 z-10 flex-wrap">
-                <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-[10px] font-semibold tracking-widest uppercase bg-[#702D3C] text-white shadow-xs">
+                <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-[10px] font-semibold tracking-widest uppercase bg-[#702D3C] text-white shadow-xs border border-[#B89A65]/40">
                   The Signature Hamper
                 </span>
-                <span className="px-2 py-0.5 md:px-2.5 md:py-0.5 rounded-full text-[8px] md:text-[9px] font-medium tracking-wider uppercase bg-[#183D30] text-[#FAF6EF]">
+                <span className="px-2 py-0.5 md:px-2.5 md:py-0.5 rounded-full text-[8px] md:text-[9px] font-medium tracking-wider uppercase bg-[#4A1523] text-[#FAF6EF]">
                   6 Gold Compartments
                 </span>
               </div>
 
-              {/* Desktop-only Bottom Caption Pill (Untouched on desktop) */}
+              {/* Desktop-only Bottom Caption Pill */}
               <motion.div
                 style={{ y: overlayY }}
-                className="hidden md:flex absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#F2E8D8] text-xs items-center justify-between"
+                className="hidden md:flex absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#F2E8D8] text-xs items-center justify-between shadow-md"
               >
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-[#702D3C] font-semibold block">
                     EXCLUSIVE PRESENTATION
                   </span>
-                  <span className="font-serif text-base text-[#183D30] font-normal">
+                  <span className="font-serif text-base text-[#702D3C] font-normal">
                     {selectedSize.name} Hamper ({selectedSize.approxWeight})
                   </span>
                 </div>
@@ -74,20 +74,20 @@ export default function SignatureHamperHeroSection() {
                   <span className="text-xs text-[#777065] line-through mr-1">
                     ₹{selectedSize.originalPrice}
                   </span>
-                  <span className="font-serif text-xl font-bold text-[#183D30]">
+                  <span className="font-serif text-xl font-bold text-[#702D3C]">
                     ₹{selectedSize.price}
                   </span>
                 </div>
               </motion.div>
             </div>
 
-            {/* Mobile-only Caption Card Below Image (Unblocks the photo on mobile) */}
+            {/* Mobile-only Caption Card Below Image */}
             <div className="md:hidden mt-3 p-3.5 rounded-2xl bg-white border border-[#F2E8D8] text-xs flex items-center justify-between shadow-xs">
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-[#702D3C] font-semibold block">
                   EXCLUSIVE PRESENTATION
                 </span>
-                <span className="font-serif text-base text-[#183D30] font-normal">
+                <span className="font-serif text-base text-[#702D3C] font-normal">
                   {selectedSize.name} Hamper ({selectedSize.approxWeight})
                 </span>
               </div>
@@ -95,7 +95,7 @@ export default function SignatureHamperHeroSection() {
                 <span className="text-xs text-[#777065] line-through mr-1">
                   ₹{selectedSize.originalPrice}
                 </span>
-                <span className="font-serif text-lg font-bold text-[#183D30]">
+                <span className="font-serif text-lg font-bold text-[#702D3C]">
                   ₹{selectedSize.price}
                 </span>
               </div>
@@ -110,7 +110,7 @@ export default function SignatureHamperHeroSection() {
             </div>
 
             <h2
-              className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal tracking-tight leading-[1.1] mb-2"
+              className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight leading-[1.1] mb-2"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               A Little Box of Extraordinary Goodness.
@@ -126,9 +126,9 @@ export default function SignatureHamperHeroSection() {
               favourite gourmet varieties.
             </p>
 
-            {/* Size Options Grid */}
+            {/* Size Options Grid (Elevated e-commerce card style) */}
             <div className="mb-8">
-              <span className="text-xs uppercase tracking-wider font-semibold text-[#183D30] block mb-3">
+              <span className="text-xs uppercase tracking-wider font-semibold text-[#702D3C] block mb-3">
                 Select Your Desired Caliber:
               </span>
               <div className="grid grid-cols-3 gap-3">
@@ -143,27 +143,33 @@ export default function SignatureHamperHeroSection() {
                       type="button"
                       key={size.id}
                       onClick={() => setSelectedSize(size)}
-                      className={`p-3 rounded-xl border text-left transition-all ${
+                      className={`p-3.5 rounded-2xl border text-left transition-all duration-300 ${
                         isSelected
-                          ? "bg-white border-[#183D30] shadow-md ring-1 ring-[#183D30]"
-                          : "bg-white/70 hover:bg-white border-[#F2E8D8]"
+                          ? "bg-[#FBF6F7] border-2 border-[#702D3C] shadow-md shadow-[#702D3C]/10 ring-2 ring-[#B89A65]/40 -translate-y-0.5"
+                          : "bg-gradient-to-b from-white to-[#FAF6EF] hover:bg-white border-[#B89A65]/35 hover:border-[#702D3C]/70 shadow-xs"
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="font-serif text-base text-[#183D30] font-normal">
+                        <span
+                          className={`font-serif text-base font-normal ${
+                            isSelected ? "text-[#702D3C] font-medium" : "text-[#29251F]"
+                          }`}
+                        >
                           {size.name}
                         </span>
-                        <span className="text-[9px] font-bold text-[#702D3C]">{discountPct}% OFF</span>
+                        <span className="text-[9px] font-bold text-[#702D3C] bg-[#702D3C]/10 px-1.5 py-0.5 rounded">
+                          {discountPct}% OFF
+                        </span>
                       </div>
-                      <div className="flex items-baseline gap-1 mt-1">
-                        <span className="font-serif text-lg font-bold text-[#183D30]">
+                      <div className="flex items-baseline gap-1 mt-1.5">
+                        <span className="font-serif text-lg font-bold text-[#702D3C]">
                           ₹{size.price}
                         </span>
                         <span className="text-[10px] text-[#777065] line-through">
                           ₹{size.originalPrice}
                         </span>
                       </div>
-                      <span className="text-[10px] text-[#777065] block mt-0.5 truncate">
+                      <span className="text-[10px] text-[#777065] block mt-1 truncate font-light">
                         {size.approxWeight.split("(")[0]}
                       </span>
                     </button>
@@ -176,7 +182,7 @@ export default function SignatureHamperHeroSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <Link
                 href="/our-hamper"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs uppercase tracking-widest font-semibold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
               >
                 <span>EXPLORE & CURATE HAMPER</span>
                 <ArrowRight className="w-4 h-4 text-[#B89A65]" />
@@ -188,4 +194,3 @@ export default function SignatureHamperHeroSection() {
     </section>
   );
 }
-

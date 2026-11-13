@@ -58,11 +58,11 @@ export default function WhyPremiumNuts() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-2xl mx-auto mb-16 sm:mb-20"
         >
-          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#183D30] block mb-3">
+          <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#702D3C] block mb-3">
             THE MAISON ADVANTAGE
           </span>
           <h2
-            className="font-serif text-3xl sm:text-5xl text-[#183D30] font-normal tracking-tight"
+            className="font-serif text-3xl sm:text-5xl text-[#702D3C] font-normal tracking-tight"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
             Why Premium Nuts?
@@ -87,11 +87,11 @@ export default function WhyPremiumNuts() {
                 className="p-6 sm:p-7 rounded-2xl bg-white border border-[#F2E8D8] shadow-xs hover:shadow-md hover:border-[#B89A65]/60 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#183D30]/10 text-[#183D30] flex items-center justify-center mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-[#702D3C]/10 text-[#702D3C] flex items-center justify-center mb-5">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3
-                    className="font-serif text-xl text-[#183D30] font-normal mb-2"
+                    className="font-serif text-xl text-[#702D3C] font-normal mb-2"
                     style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                   >
                     {reason.title}
@@ -101,7 +101,7 @@ export default function WhyPremiumNuts() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-[#F2E8D8] flex items-center gap-1.5 text-[10px] text-[#183D30] font-medium">
+                <div className="mt-6 pt-3 border-t border-[#F2E8D8] flex items-center gap-1.5 text-[10px] text-[#702D3C] font-medium">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Signature Standard</span>
                 </div>

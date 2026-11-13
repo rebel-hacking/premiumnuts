@@ -21,16 +21,15 @@ export default function SeasonalOffersSection() {
     return true;
   });
 
-  // Part 13.2: "If no offers are active, hide the entire offers section automatically. Do not leave empty spacing."
   if (activeOffers.length === 0) {
     return null;
   }
 
   return (
-    <section className="py-20 sm:py-28 bg-[#102B22] text-[#FAF6EF] relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#38101B] text-[#FAF6EF] relative overflow-hidden">
       {/* Subtle luxury backdrop motif */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_top_right,rgba(184,154,101,0.15),transparent_70%)] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[radial-gradient(circle_at_bottom_left,rgba(112,45,60,0.25),transparent_70%)] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_top_right,rgba(184,154,101,0.18),transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[radial-gradient(circle_at_bottom_left,rgba(112,45,60,0.35),transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -53,10 +52,10 @@ export default function SeasonalOffersSection() {
           {activeOffers.map((offer) => (
             <div
               key={offer.id}
-              className="group relative rounded-3xl overflow-hidden bg-[#183D30] border border-[#B89A65]/30 shadow-xl flex flex-col justify-between"
+              className="group relative rounded-3xl overflow-hidden bg-[#4A1523] border border-[#B89A65]/35 shadow-xl flex flex-col justify-between"
             >
               <div
-                className="relative aspect-[16/9] w-full overflow-hidden bg-[#102B22]"
+                className="relative aspect-[16/9] w-full overflow-hidden bg-[#38101B]"
                 style={{ position: "relative" }}
               >
                 <Image
@@ -66,10 +65,10 @@ export default function SeasonalOffersSection() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#183D30] via-transparent to-transparent opacity-85" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#4A1523] via-transparent to-transparent opacity-85" />
 
                 {/* Badge */}
-                <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#702D3C] text-white text-[10px] font-semibold tracking-wider uppercase shadow-xs">
+                <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#702D3C] text-white text-[10px] font-semibold tracking-wider uppercase shadow-xs border border-[#B89A65]/40">
                   <Tag className="w-3 h-3 text-[#B89A65]" />
                   <span>{offer.badge}</span>
                 </div>
@@ -101,7 +100,7 @@ export default function SeasonalOffersSection() {
 
                   <Link
                     href={offer.ctaLink}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FAF6EF] hover:bg-white text-[#183D30] text-xs uppercase tracking-wider font-semibold transition-all group-hover:shadow-md"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF6EF] text-[#702D3C] hover:bg-[#B89A65] hover:text-[#38101B] text-xs font-semibold uppercase tracking-wider transition-colors shadow-xs"
                   >
                     <span>{offer.ctaText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -115,4 +114,3 @@ export default function SeasonalOffersSection() {
     </section>
   );
 }
-

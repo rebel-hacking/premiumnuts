@@ -43,7 +43,7 @@ export default function SearchDialog({
       <div className="relative w-full max-w-2xl bg-[#F8F5ED] text-[#29251F] rounded-2xl shadow-2xl border border-[#E8DDC8] overflow-hidden">
         {/* Search Input Bar */}
         <div className="p-4 sm:p-5 border-b border-[#E8DDC8] flex items-center gap-3 bg-white">
-          <Search className="w-5 h-5 text-[#8C9A80]" />
+          <Search className="w-5 h-5 text-[#B89A65]" />
           <input
             autoFocus
             type="text"
@@ -77,7 +77,7 @@ export default function SearchDialog({
                 <button
                   key={tag}
                   onClick={() => setQuery(tag)}
-                  className="px-2.5 py-1 rounded-full bg-white text-[#183C2D] border border-[#E8DDC8] shrink-0 hover:bg-[#183C2D] hover:text-white transition-colors"
+                  className="px-2.5 py-1 rounded-full bg-white text-[#702D3C] border border-[#E8DDC8] shrink-0 hover:bg-[#702D3C] hover:text-white transition-colors"
                 >
                   {tag}
                 </button>
@@ -108,10 +108,10 @@ export default function SearchDialog({
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-[10px] uppercase tracking-wider text-[#8C9A80] font-semibold block">
+                  <span className="text-[10px] uppercase tracking-wider text-[#B89A65] font-semibold block">
                     {product.categoryLabel}
                   </span>
-                  <h4 className="font-serif text-lg text-[#183C2D] group-hover:text-[#641F35] transition-colors truncate">
+                  <h4 className="font-serif text-lg text-[#702D3C] group-hover:text-[#641F35] transition-colors truncate">
                     {product.name}
                   </h4>
                   <p className="text-xs text-[#777065] truncate font-light">
@@ -119,10 +119,10 @@ export default function SearchDialog({
                   </p>
                 </div>
                 <div className="text-right shrink-0 flex items-center gap-2">
-                  <span className="font-serif text-base font-semibold text-[#183C2D]">
+                  <span className="font-serif text-base font-semibold text-[#702D3C]">
                     ${product.options[0].price}
                   </span>
-                  <ArrowRight className="w-4 h-4 text-[#8C9A80] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#B89A65] group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             ))

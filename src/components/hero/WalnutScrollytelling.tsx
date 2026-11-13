@@ -320,7 +320,7 @@ export default function WalnutScrollytelling({
         {/* Loading Pill */}
         {!isLoaded && loadingProgress < 100 && (
           <div className="absolute top-24 right-8 z-30 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-[#F2E8D8] text-xs font-medium text-[#777065] shadow-xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#183D30] animate-ping" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#702D3C] animate-ping" />
             <span>Loading experience {loadingProgress}%</span>
           </div>
         )}
@@ -330,8 +330,8 @@ export default function WalnutScrollytelling({
           {/* Top Brand Tag */}
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <span className="inline-block w-2 h-2 rounded-full bg-[#183D30]" />
-              <span className="text-[11px] sm:text-xs tracking-[0.25em] uppercase font-semibold text-[#183D30]/85">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#702D3C]" />
+              <span className="text-[11px] sm:text-xs tracking-[0.25em] uppercase font-semibold text-[#702D3C]/85">
                 {phaseInfo.eyebrow}
               </span>
             </div>
@@ -340,13 +340,13 @@ export default function WalnutScrollytelling({
             <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-[#F2E8D8] text-[11px] text-[#777065]">
               <span>GIFT HAMPER RITUAL</span>
               <span className="text-[#B89A65]">✦</span>
-              <span className="font-mono text-[#183D30] font-semibold">
+              <span className="font-mono text-[#702D3C] font-semibold">
                 {Math.round(scrollProgress * 100)}%
               </span>
             </div>
           </div>
 
-          {/* Dynamic Headline Block: On mobile, positioned towards the top (mt-4 sm:mt-8 mb-auto) to leave the spinning walnut 100% visible; On desktop, centered with md:my-auto */}
+          {/* Dynamic Headline Block */}
           <div className="w-full max-w-3xl mt-4 sm:mt-8 mb-auto md:my-auto text-left">
             <AnimatePresence mode="wait">
               <motion.div
@@ -358,7 +358,7 @@ export default function WalnutScrollytelling({
                 className="max-w-2xl"
               >
                 <h1
-                  className="font-serif text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#183D30] leading-[1.1] mb-2 sm:mb-5 drop-shadow-xs"
+                  className="font-serif text-3xl sm:text-5xl lg:text-7xl font-normal tracking-tight text-[#702D3C] leading-[1.1] mb-2 sm:mb-5 drop-shadow-xs"
                   style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                 >
                   {phaseInfo.headline}
@@ -371,12 +371,11 @@ export default function WalnutScrollytelling({
           </div>
 
           {/* Bottom Fixed Single CTA & Milestone Dots */}
-          {/* Part 4.3: "Use only ONE CTA. CTA text: EXPLORE OUR HAMPER. The CTA must remain unchanged throughout the entire scrolling animation." */}
           <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pointer-events-auto">
             <Link
               href="/our-hamper"
               onClick={handleCtaClick}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#183D30] hover:bg-[#102B22] text-[#FAF6EF] text-xs font-semibold uppercase tracking-[0.2em] transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 group border border-[#183D30]"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#702D3C] hover:bg-[#4A1523] text-[#FAF6EF] text-xs font-semibold uppercase tracking-[0.2em] transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 group border border-[#702D3C]"
             >
               <span>EXPLORE OUR HAMPER</span>
               <ArrowRight className="w-4 h-4 text-[#B89A65] group-hover:translate-x-1 transition-transform" />
@@ -390,7 +389,7 @@ export default function WalnutScrollytelling({
                   <div
                     key={num}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
-                      isActive ? "w-8 bg-[#183D30]" : "w-2 bg-[#F2E8D8] hover:bg-[#B89A65]"
+                      isActive ? "w-8 bg-[#702D3C]" : "w-2 bg-[#F2E8D8] hover:bg-[#B89A65]"
                     }`}
                   />
                 );

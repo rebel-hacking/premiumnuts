@@ -55,12 +55,12 @@ export default function FAQPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#183D30] selection:text-[#FAF6EF]">
+    <main className="min-h-screen bg-[#FAF6EF] text-[#29251F] selection:bg-[#702D3C] selection:text-[#FAF6EF]">
       <Navbar />
       <CartDrawer />
 
       {/* Hero */}
-      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#183D30] text-[#FAF6EF] relative overflow-hidden">
+      <section className="pt-32 sm:pt-40 pb-16 sm:pb-24 bg-[#4A1523] text-[#FAF6EF] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center relative z-10">
           <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#B89A65] block mb-3">
             ASSISTANCE & CLARITY
@@ -94,14 +94,14 @@ export default function FAQPage() {
                     className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 transition-colors hover:bg-[#FAF6EF]/50"
                   >
                     <span
-                      className="font-serif text-lg sm:text-xl text-[#183D30] font-normal"
+                      className="font-serif text-lg sm:text-xl text-[#702D3C] font-normal"
                       style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                     >
                       {faq.q}
                     </span>
                     <ChevronDown
                       className={`w-5 h-5 text-[#B89A65] shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-[#183D30]" : ""
+                        isOpen ? "rotate-180 text-[#702D3C]" : ""
                       }`}
                     />
                   </button>
@@ -119,7 +119,7 @@ export default function FAQPage() {
           {/* WhatsApp Support Prompt */}
           <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-[#F2E8D8] border border-[#B89A65]/40 text-center space-y-3">
             <h3
-              className="font-serif text-2xl text-[#183D30] font-normal"
+              className="font-serif text-2xl text-[#702D3C] font-normal"
               style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
             >
               Have a Different Question?
@@ -132,7 +132,7 @@ export default function FAQPage() {
                 href={WHATSAPP_BASE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#183D30] text-[#FAF6EF] text-xs uppercase tracking-wider font-semibold hover:bg-[#102B22] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#702D3C] text-[#FAF6EF] text-xs uppercase tracking-wider font-semibold hover:bg-[#4A1523] transition-colors"
               >
                 <MessageCircle className="w-4 h-4 text-[#B89A65]" />
                 <span>Chat with Us on WhatsApp ({WHATSAPP_PHONE_RAW})</span>
